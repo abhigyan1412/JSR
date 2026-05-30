@@ -131,10 +131,43 @@ function initContactFormValidation() {
     });
 
     if (isValid) {
-      // Mock submit action - Hide form and show success state
-      form.style.display = 'none';
-      successState.style.display = 'block';
-      successState.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+
+      // 1. Show loading state on the button
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending...';
+
+      // 2. Prepare form data & add Web3Forms configuration
+      const formData = new FormData(form);
+      formData.append("access_key", "d821bd03-3b06-4828-b18b-5adcfe8849d7");
+      formData.append("subject", "New Consultation Request - JSR NetSol");
+      formData.append("from_name", "JSR NetSol Website");
+
+      // 3. Post to Web3Forms API
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+      .then(async (response) => {
+        const result = await response.json();
+        if (response.status === 200) {
+          // Hide form and show success state
+          form.style.display = 'none';
+          successState.style.display = 'block';
+          successState.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          alert(result.message || "Something went wrong. Please try again.");
+        }
+      })
+      .catch(error => {
+        console.error("Submission error:", error);
+        alert("Failed to submit request. Please check your network connection.");
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      });
     }
   });
 
