@@ -21,9 +21,12 @@
 * Continuous Learning: Technology evolves rapidly. [cite_start]Our team maintains active OEM certifications and lab environments to stay current — so our customers don't have to manage that risk. [cite: 27, 28]
 * Transparent Communication: We surface risks, trade-offs, and constraints early. [cite_start]No overpromising — just clear, documented commitments with defined escalation paths when things don't go to plan. [cite: 29, 30]
 * [cite_start]ISO 9001:2015: Quality Management System — certified for consistent service delivery processes. [cite: 32, 33]
-* [cite_start]ISO 27001: Information Security Management — certified handling of customer and project data. [cite: 34, 35]
+* ISO 14001:2015: Environmental Management System — certified environmental operations and standards compliance.
+* [cite_start]ISO 27001:2022: Information Security Management — certified protection of corporate and customer data assets. [cite: 34, 35]
+* CMMI Level 5: Capability Maturity Model Integration — appraised at the highest level for optimizing processes and delivery quality.
+* [cite_start]GeM Vendor: Active seller on Government e-Marketplace with multiple product and service listings. [cite: 38, 39]
 * [cite_start]MSME Registered: Udyam-registered MSME — eligible for government and PSU procurement preferences. [cite: 36, 37]
-* [cite_start]GeM Listed Vendor: Active seller on Government e-Marketplace with multiple product and service listings. [cite: 38, 39]
+
 
 ## [cite_start]Services Page [cite: 237]
 * [cite_start]Consulting & Solution Design: Infrastructure Assessment, Solution Architecture & HLD/LLD, BoM & TCO Analysis, Proof of Concept (PoC), RFP / Tender Support. [cite: 240, 243, 245, 247, 249, 251]

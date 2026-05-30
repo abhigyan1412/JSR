@@ -14,6 +14,14 @@ JSR NetSol delivers end-to-end infrastructure design, supply, implementation, an
 - Cloud Solutions
 - Managed Services (AMC/support, operations)
 
+### Corporate Credentials & Standards
+- ISO 9001:2015 (Quality Management System)
+- ISO 14001:2015 (Environmental Management System)
+- ISO 27001:2022 (Information Security Management System)
+- CMMI Level 5 (Capability Maturity Model Integration)
+- GeM Vendor (Government e-Marketplace)
+- MSME Registered (Udyam MSME)
+
 ## Target Audience
 Primary:
 - CIOs, CTOs
