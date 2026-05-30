@@ -987,3 +987,272 @@ textarea.form-control {
   font-size: var(--fs-lg);
   margin-bottom: var(--space-8);
 }
+
+.cta-banner .btn-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.cta-banner .btn-outline:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: rgba(6, 182, 212, 0.04);
+}
+
+/* ==========================================================================
+   Customers Page Components
+   ========================================================================== */
+.filter-cluster {
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+.filter-btn {
+  background: none;
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--color-text-light-secondary);
+}
+.filter-btn.active, .filter-btn:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Responsive Compact Customer Grid */
+.customer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+/* Compact Customer Card Design */
+.customer-card {
+  background-color: var(--color-light-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  box-shadow: var(--shadow-sm);
+  transition: opacity var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  flex: 0 1 100%;
+  max-width: 100%;
+}
+@media (min-width: 480px) {
+  .customer-card {
+    flex: 0 1 calc(50% - var(--space-3));
+    max-width: calc(50% - var(--space-3));
+  }
+}
+@media (min-width: 768px) {
+  .customer-card {
+    flex: 0 1 calc(33.333% - var(--space-3));
+    max-width: calc(33.333% - var(--space-3));
+  }
+}
+@media (min-width: 992px) {
+  .customer-card {
+    flex: 0 1 calc(25% - var(--space-3));
+    max-width: calc(25% - var(--space-3));
+  }
+}
+@media (min-width: 1200px) {
+  .customer-card {
+    flex: 0 1 calc(20% - var(--space-3));
+    max-width: calc(20% - var(--space-3));
+  }
+}
+
+.customer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+.customer-card.hidden {
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Customer Logo & Fallback Box */
+.customer-logo-box {
+  height: 42px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light-surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  position: relative;
+}
+.customer-logo-img {
+  max-height: 30px;
+  max-width: 85%;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+.customer-card:hover .customer-logo-img {
+  transform: scale(1.05);
+}
+.customer-logo-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.5px;
+}
+
+/* Dynamic Distinct Badges for Categories */
+.customer-badge {
+  display: inline-block;
+  align-self: center;
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-full);
+}
+.badge-gov {
+  background-color: rgba(37, 99, 235, 0.08);
+  color: var(--color-primary);
+}
+.badge-mfg {
+  background-color: rgba(245, 158, 11, 0.08);
+  color: #d97706;
+}
+.badge-bfsi {
+  background-color: rgba(6, 182, 212, 0.08);
+  color: var(--color-secondary-hover);
+}
+.badge-health {
+  background-color: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+}
+.badge-edu {
+  background-color: rgba(99, 102, 241, 0.08);
+  color: #4f46e5;
+}
+
+/* Fallback Initials Color Coding */
+.fallback-gov {
+  color: var(--color-primary);
+  background-color: rgba(37, 99, 235, 0.04);
+}
+.fallback-mfg {
+  color: #d97706;
+  background-color: rgba(245, 158, 11, 0.04);
+}
+.fallback-bfsi {
+  color: var(--color-secondary-hover);
+  background-color: rgba(6, 182, 212, 0.04);
+}
+.fallback-health {
+  color: #dc2626;
+  background-color: rgba(239, 68, 68, 0.04);
+}
+.fallback-edu {
+  color: #4f46e5;
+  background-color: rgba(99, 102, 241, 0.04);
+}
+
+/* Typography inside Card */
+.customer-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-text-light-primary);
+  margin: 0;
+  line-height: var(--lh-tight);
+}
+.customer-desc {
+  font-size: 12px;
+  color: var(--color-text-light-secondary);
+  margin: 0;
+  line-height: var(--lh-snug);
+}
+
+/* ==========================================================================
+   Contact Page Components
+   ========================================================================== */
+.contact-info-card {
+  background-color: var(--color-light-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.contact-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: var(--fs-xs);
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+.contact-label.success {
+  color: var(--color-success);
+}
+
+.contact-info-card h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-2);
+}
+
+.contact-info-card p {
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-3);
+}
+
+.contact-links {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.contact-address-footer {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-text-light-primary);
+}
+
+.lead-form-box h3 {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.lead-form-box p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.form-success-state h3 {
+  font-size: var(--fs-xl);
+  color: var(--color-text-light-primary);
+  margin-bottom: var(--space-2);
+}
+
+.form-success-state p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light-secondary);
+}
+

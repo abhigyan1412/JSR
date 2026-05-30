@@ -181,3 +181,56 @@ img {
   border-radius: 0;
   border: 0;
 }
+
+/* Subpage Header Layout */
+.page-header {
+  padding-top: 140px;
+  padding-bottom: var(--space-12);
+  background-color: var(--color-light-surface);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.page-title {
+  font-size: clamp(var(--fs-3xl), 6vw, var(--fs-5xl));
+  margin-bottom: var(--space-4);
+  letter-spacing: -1px;
+}
+
+.lead-text {
+  font-weight: 500;
+  font-size: var(--fs-lg);
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border-light);
+  margin: var(--space-4) 0;
+}
+.section-dark .divider {
+  border-color: var(--border-dark);
+}
+
+.max-width-sm {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-width-md {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Margin and Spacing Helpers */
+.mt-2 { margin-top: var(--space-2) !important; }
+.mt-4 { margin-top: var(--space-4) !important; }
+.mt-6 { margin-top: var(--space-6) !important; }
+.mt-8 { margin-top: var(--space-8) !important; }
+
+.mb-1 { margin-bottom: var(--space-1) !important; }
+.mb-2 { margin-bottom: var(--space-2) !important; }
+.mb-3 { margin-bottom: var(--space-3) !important; }
+.mb-4 { margin-bottom: var(--space-4) !important; }
+.mb-6 { margin-bottom: var(--space-6) !important; }
+
