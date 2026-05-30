@@ -22,6 +22,46 @@ JSR NetSol delivers end-to-end infrastructure design, supply, implementation, an
 - GeM Vendor (Government e-Marketplace)
 - MSME Registered (Udyam MSME)
 
+## Enterprise Customers & Case Profiles
+The website highlights case profiles of actual deployments for leading teams in India across five key industries:
+
+### Government & PSU (Public Sector)
+- **Hindustan Aeronautics Limited** – Enterprise networking infrastructure deployment.
+- **RailTel** – Routing, switching, and passive networking infrastructure projects.
+- **Indian Oil Corporation** – Enterprise networking infrastructure and connectivity solutions.
+- **Bharat Electronics Limited** – Network modernization involving enterprise routing/switching.
+- **Department of Science and Technology** – Enterprise networking infrastructure implementation.
+
+### Heavy Industry, Energy & Manufacturing
+- **Dreamtech Co., Ltd.** – Campus networking, security infrastructure, and server/compute implementation.
+- **EDF (Électricité de France)** – Deployed switching, wireless networking, security, and network protection.
+- **Idemitsu Lube India Private Limited** – Modernized networking, security, data center racks, and power protection.
+- **India Glycols Limited** – Enterprise data protection and backup infrastructure solutions.
+- **Mitutoyo South Asia** – End-user computing infrastructure modernization.
+- **Afcons Infrastructure** – Workforce computing infrastructure deployment.
+- **Hero Cycles** – Network infrastructure maintenance and support services.
+
+### BFSI & Professional Services
+- **IFFCO Tokio** – Multi-site routing and switching infrastructure across 50+ locations.
+- **Fugro** – Enterprise firewall and network security deployment.
+- **PolicyX** – Enterprise end-user computing infrastructure.
+- **Orbis Financial Corporation** – Enterprise IT infrastructure and technology support services.
+- **PLS Lawyers Pvt Ltd** – Facility management and IT infrastructure lifecycle management.
+- **Hughes Communications India** – Enterprise IT infrastructure support and technology services.
+- **Hitachi Systems India Private Limited** – Virtualization and VMware infrastructure solutions.
+- **Tony Blair Institute for Global Change** – Hybrid workplace and collaboration solutions.
+
+### Healthcare & Pharmaceuticals
+- **Mankind Pharma** – Security infrastructure, endpoint computing, end-user computing, and annual support services.
+- **STANFORD LABORATORIES PVT. LTD.** – Enterprise server infrastructure deployment.
+
+### Education, Travel & Consumer Spaces
+- **Shri Lal Bahadur Shastri National Sanskrit University** – Server, storage, and campus infrastructure modernization.
+- **Management Development Institute Gurgaon** – Compute infrastructure and end-user technology deployment.
+- **National Institute of Design** – IT infrastructure maintenance and support services.
+- **Housing.com** – Campus networking infrastructure deployment.
+- **United Airlines** – End-user technology and workplace productivity infrastructure.
+
 ## Target Audience
 Primary:
 - CIOs, CTOs
