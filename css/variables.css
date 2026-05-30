@@ -1,0 +1,93 @@
+/* CSS Variables & Design Tokens for JSR NetSol */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Color Palette - Premium Enterprise / Cybersecurity Theme */
+  --color-dark-bg: #0b0f19;       /* Deep slate base dark */
+  --color-dark-surface: #111827;  /* Deep dark panel */
+  --color-dark-card: #1f2937;     /* Elevated dark card */
+  
+  --color-light-bg: #ffffff;      /* Pure white */
+  --color-light-surface: #f8fafc; /* Soft off-white */
+  --color-light-card: #ffffff;    /* Card base */
+  
+  --color-text-dark-primary: #ffffff;
+  --color-text-dark-secondary: #cbd5e1;
+  --color-text-dark-muted: #94a3b8;
+  
+  --color-text-light-primary: #0f172a;   /* Deep charcoal */
+  --color-text-light-secondary: #475569; /* Slate grey */
+  --color-text-light-muted: #64748b;     /* Muted slate */
+
+  /* Accents */
+  --color-primary: #2563eb;       /* Cobalt blue */
+  --color-primary-hover: #1d4ed8;
+  --color-secondary: #06b6d4;     /* Cybersecurity Cyan */
+  --color-secondary-hover: #0891b2;
+  --color-accent: #f59e0b;        /* Warn/Alert gold */
+  --color-success: #10b981;       /* Safe green */
+  --color-info: #3b82f6;
+  
+  /* Borders */
+  --border-light: #e2e8f0;
+  --border-dark: #374151;
+  --border-glow: rgba(37, 99, 235, 0.2);
+
+  /* Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography Scale */
+  --fs-xs: 0.75rem;     /* 12px */
+  --fs-sm: 0.875rem;    /* 14px */
+  --fs-base: 1rem;      /* 16px */
+  --fs-lg: 1.125rem;    /* 18px */
+  --fs-xl: 1.25rem;     /* 20px */
+  --fs-2xl: 1.5rem;     /* 24px */
+  --fs-3xl: 2rem;       /* 32px */
+  --fs-4xl: 2.5rem;     /* 40px */
+  --fs-5xl: 3.25rem;    /* 52px */
+  --fs-6xl: 4rem;       /* 64px */
+
+  /* Line Heights */
+  --lh-tight: 1.2;
+  --lh-snug: 1.35;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.625;
+
+  /* Spacing Scale (4px base) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+  --space-32: 8rem;    /* 128px */
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.15);
+
+  /* Animation transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Max Widths */
+  --max-width-content: 1200px;
+}

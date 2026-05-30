@@ -1,0 +1,183 @@
+/* Layout Primitives & Core Styles for JSR NetSol */
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--color-text-light-primary);
+  background-color: var(--color-light-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  color: var(--color-text-light-primary);
+}
+
+h1 { font-size: clamp(var(--fs-3xl), 8vw, var(--fs-6xl)); }
+h2 { font-size: clamp(var(--fs-2xl), 5vw, var(--fs-4xl)); }
+h3 { font-size: clamp(var(--fs-xl), 3vw, var(--fs-2xl)); }
+h4 { font-size: var(--fs-lg); }
+
+p {
+  color: var(--color-text-light-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Primitives */
+
+/* 1. Container - Constraints content width */
+.container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+/* 2. Section - Standard vertical spacing block */
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+@media (min-width: 768px) {
+  .section {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+}
+
+/* Dark mode theme section modifier */
+.section-dark {
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-dark-primary);
+}
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 {
+  color: var(--color-text-dark-primary);
+}
+.section-dark p {
+  color: var(--color-text-dark-secondary);
+}
+
+/* Muted light theme section modifier */
+.section-muted {
+  background-color: var(--color-light-surface);
+}
+
+/* 3. Stack - Vertical flow primitive */
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+.stack-sm > * + * { margin-top: var(--space-2); }
+.stack-md > * + * { margin-top: var(--space-6); }
+.stack-lg > * + * { margin-top: var(--space-12); }
+
+/* 4. Cluster - Horizontal inline flex flow primitive */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+.cluster-sm { gap: var(--space-2); }
+.cluster-md { gap: var(--space-6); }
+.cluster-lg { gap: var(--space-12); }
+.cluster-between { justify-content: space-between; }
+.cluster-center { justify-content: center; }
+
+/* 5. Grid - Fluid multi-column layout primitive */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+.grid-2 {
+  grid-template-columns: 1fr;
+}
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+.grid-4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-lg { gap: var(--space-12); }
+}
+
+@media (min-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-muted { color: var(--color-text-light-muted) !important; }
+.section-dark .text-muted { color: var(--color-text-dark-muted) !important; }
+
+.font-heading { font-family: var(--font-heading); }
+
+.w-full { width: 100%; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-radius: 0;
+  border: 0;
+}

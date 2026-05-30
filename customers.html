@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the enterprise teams JSR NetSol supports across India, including government institutions, PSUs, healthcare, and financial services.">
+  <title>Our Customers & Case Profiles | JSR NetSol</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    /* Specific Page Styles for Interactive Filters */
+    .filter-cluster {
+      margin-bottom: var(--space-8);
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-2);
+    }
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--border-light);
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius-full);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      color: var(--color-text-light-secondary);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #ffffff;
+    }
+    
+    /* Responsive Compact Customer Grid */
+    .customer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-3);
+    }
+
+    /* Compact Customer Card Design */
+    .customer-card {
+      background-color: var(--color-light-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: flex-start;
+      gap: var(--space-2);
+      box-shadow: var(--shadow-sm);
+      transition: opacity var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+    @media (min-width: 480px) {
+      .customer-card {
+        flex: 0 1 calc(50% - var(--space-3));
+        max-width: calc(50% - var(--space-3));
+      }
+    }
+    @media (min-width: 768px) {
+      .customer-card {
+        flex: 0 1 calc(33.333% - var(--space-3));
+        max-width: calc(33.333% - var(--space-3));
+      }
+    }
+    @media (min-width: 992px) {
+      .customer-card {
+        flex: 0 1 calc(25% - var(--space-3));
+        max-width: calc(25% - var(--space-3));
+      }
+    }
+    @media (min-width: 1200px) {
+      .customer-card {
+        flex: 0 1 calc(20% - var(--space-3));
+        max-width: calc(20% - var(--space-3));
+      }
+    }
+    
+    .customer-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+    .customer-card.hidden {
+      display: none;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    
+    /* Customer Logo & Fallback Box */
+    .customer-logo-box {
+      height: 42px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-light-surface);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+      position: relative;
+    }
+    .customer-logo-img {
+      max-height: 30px;
+      max-width: 85%;
+      object-fit: contain;
+      transition: transform var(--transition-fast);
+    }
+    .customer-card:hover .customer-logo-img {
+      transform: scale(1.05);
+    }
+    .customer-logo-fallback {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: var(--fs-sm);
+      letter-spacing: 0.5px;
+    }
+    
+    /* Dynamic Distinct Badges for Categories */
+    .customer-badge {
+      display: inline-block;
+      align-self: center;
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.15rem 0.4rem;
+      border-radius: var(--radius-full);
+    }
+    .badge-gov {
+      background-color: rgba(37, 99, 235, 0.08);
+      color: var(--color-primary);
+    }
+    .badge-mfg {
+      background-color: rgba(245, 158, 11, 0.08);
+      color: #d97706;
+    }
+    .badge-bfsi {
+      background-color: rgba(6, 182, 212, 0.08);
+      color: var(--color-secondary-hover);
+    }
+    .badge-health {
+      background-color: rgba(239, 68, 68, 0.08);
+      color: #dc2626;
+    }
+    .badge-edu {
+      background-color: rgba(99, 102, 241, 0.08);
+      color: #4f46e5;
+    }
+    
+    /* Fallback Initials Color Coding */
+    .fallback-gov {
+      color: var(--color-primary);
+      background-color: rgba(37, 99, 235, 0.04);
+    }
+    .fallback-mfg {
+      color: #d97706;
+      background-color: rgba(245, 158, 11, 0.04);
+    }
+    .fallback-bfsi {
+      color: var(--color-secondary-hover);
+      background-color: rgba(6, 182, 212, 0.04);
+    }
+    .fallback-health {
+      color: #dc2626;
+      background-color: rgba(239, 68, 68, 0.04);
+    }
+    .fallback-edu {
+      color: #4f46e5;
+      background-color: rgba(99, 102, 241, 0.04);
+    }
+    
+    /* Typography inside Card */
+    .customer-title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-sm);
+      font-weight: 700;
+      color: var(--color-text-light-primary);
+      margin: 0;
+      line-height: var(--lh-tight);
+    }
+    .customer-desc {
+      font-size: 12px;
+      color: var(--color-text-light-secondary);
+      margin: 0;
+      line-height: var(--lh-snug);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="JSR NetSol Home">
+        <img src="assets/logos/jsr.png" alt="JSR NetSol Logo" class="logo-img">
+        <span class="logo-text">JSR <span>NetSol</span></span>
+      </a>
+      
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="customers.html" class="nav-link">Customers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Dropdown Menu -->
+  <div class="mobile-menu" aria-label="Mobile Navigation">
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+      <li><a href="customers.html" class="nav-link">Customers</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Customers Hero Section -->
+    <section class="section section-muted" style="padding-top: 140px; padding-bottom: 80px;">
+      <div class="container text-center">
+        <div class="stack stack-sm" style="max-width: 850px; margin: 0 auto;">
+          <span class="section-label">Proven Delivery</span>
+          <h1 style="font-size: clamp(var(--fs-3xl), 6vw, var(--fs-5xl)); letter-spacing: -1px; margin-bottom: var(--space-2);">Trusted by Enterprise Teams</h1>
+          <p class="section-desc">
+            200+ organisations rely on JSR NetSol for infrastructure design, cybersecurity, and managed services — with documented delivery, OEM authorisations, and long-term support SLAs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customers Grid & Dynamic Filters -->
+    <section class="section">
+      <div class="container">
+        <!-- Interactive Category Tags -->
+        <div class="cluster filter-cluster">
+          <button class="filter-btn active" data-filter="all">All Industries</button>
+          <button class="filter-btn" data-filter="gov-psu">Government & PSU</button>
+          <button class="filter-btn" data-filter="mfg-energy">Manufacturing & Energy</button>
+          <button class="filter-btn" data-filter="bfsi-services">BFSI & Professional Services</button>
+          <button class="filter-btn" data-filter="healthcare-pharma">Healthcare & Pharma</button>
+          <button class="filter-btn" data-filter="education-consumer">Education & Consumer Spaces</button>
+        </div>
+
+        <div class="customer-grid" id="customersGrid">
+          
+          <!-- ==================== GOVERNMENT & PSU ==================== -->
+          <div class="customer-card" data-cat="gov-psu">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/hal.png" alt="Hindustan Aeronautics Limited Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-gov">
+                <span>HAL</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-gov">Government & PSU</span>
+            <h3 class="customer-title">Hindustan Aeronautics Limited</h3>
+            <p class="customer-desc">Enterprise networking infrastructure deployment.</p>
+          </div>
+
+          <div class="customer-card" data-cat="gov-psu">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/railtel.png" alt="RailTel Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-gov">
+                <span>RailTel</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-gov">Government & PSU</span>
+            <h3 class="customer-title">RailTel</h3>
+            <p class="customer-desc">Routing, switching, and passive networking infrastructure projects supporting enterprise connectivity requirements.</p>
+          </div>
+
+          <div class="customer-card" data-cat="gov-psu">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/iocl.png" alt="Indian Oil Corporation Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-gov">
+                <span>IOCL</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-gov">Government & PSU</span>
+            <h3 class="customer-title">Indian Oil Corporation</h3>
+            <p class="customer-desc">Enterprise networking infrastructure and connectivity solutions.</p>
+          </div>
+
+          <div class="customer-card" data-cat="gov-psu">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/bel.jpg" alt="Bharat Electronics Limited Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-gov">
+                <span>BEL</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-gov">Government & PSU</span>
+            <h3 class="customer-title">Bharat Electronics Limited</h3>
+            <p class="customer-desc">Network modernization projects involving enterprise routing and switching infrastructure.</p>
+          </div>
+
+          <div class="customer-card" data-cat="gov-psu">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/dst.png" alt="Department of Science and Technology Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-gov">
+                <span>DST</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-gov">Government & PSU</span>
+            <h3 class="customer-title">Department of Science and Technology</h3>
+            <p class="customer-desc">Enterprise networking infrastructure implementation.</p>
+          </div>
+
+          <!-- ==================== MANUFACTURING & ENERGY ==================== -->
+          <div class="customer-card" data-cat="mfg-energy">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/dt.png" alt="Dreamtech Co., Ltd. Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-mfg">
+                <span>DT</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-mfg">Manufacturing & Energy</span>
+            <h3 class="customer-title">Dreamtech Co., Ltd.</h3>
+            <p class="customer-desc">Delivered campus networking, security infrastructure, and enterprise security implementation solutions.</p>
+          </div>
+
+          <div class="customer-card" data-cat="mfg-energy">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/edf.png" alt="EDF Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-mfg">
+                <span>EDF</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-mfg">Manufacturing & Energy</span>
+            <h3 class="customer-title">EDF (Électricité de France)</h3>
+            <p class="customer-desc">Deployed switching, wireless networking, security infrastructure, and network protection solutions.</p>
+          </div>
+
+          <div class="customer-card" data-cat="mfg-energy">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/il.jpg" alt="Idemitsu Lube India Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-mfg">
+                <span>IL</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-mfg">Manufacturing & Energy</span>
+            <h3 class="customer-title">Idemitsu Lube India Private Limited</h3>
+            <p class="customer-desc">Modernized networking, security, and data center infrastructure including racks and power protection systems.</p>
+          </div>
+
+          <div class="customer-card" data-cat="mfg-energy">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/igl.svg" alt="India Glycols Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-mfg">
+                <span>IGL</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-mfg">Manufacturing & Energy</span>
+            <h3 class="customer-title">India Glycols Limited</h3>
+            <p class="customer-desc">Enterprise data protection and backup infrastructure solutions.</p>
+          </div>
+
+          <div class="customer-card" data-cat="mfg-energy">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/mitutoyo.png" alt="Mitutoyo South Asia Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-mfg">
+                <span>Mitutoyo</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-mfg">Manufacturing & Energy</span>
+            <h3 class="customer-title">Mitutoyo South Asia</h3>
+            <p class="customer-desc">End-user computing infrastructure modernization.</p>
+          </div>
+
+          <div class="customer-card" data-cat="mfg-energy">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/afcons.png" alt="Afcons Infrastructure Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-mfg">
+                <span>Afcons</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-mfg">Manufacturing & Energy</span>
+            <h3 class="customer-title">Afcons Infrastructure</h3>
+            <p class="customer-desc">Workforce computing infrastructure deployment.</p>
+          </div>
+
+          <div class="customer-card" data-cat="mfg-energy">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/hero.jpg" alt="Hero Cycles Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-mfg">
+                <span>Hero</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-mfg">Manufacturing & Energy</span>
+            <h3 class="customer-title">Hero Cycles</h3>
+            <p class="customer-desc">Network infrastructure maintenance and support services.</p>
+          </div>
+
+          <!-- ==================== BFSI & PROFESSIONAL SERVICES ==================== -->
+          <div class="customer-card" data-cat="bfsi-services">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/iffco.png" alt="IFFCO Tokio Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-bfsi">
+                <span>IFFCO</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-bfsi">BFSI & Services</span>
+            <h3 class="customer-title">IFFCO Tokio</h3>
+            <p class="customer-desc">Multi-site routing and switching infrastructure deployment across 50+ locations.</p>
+          </div>
+
+          <div class="customer-card" data-cat="bfsi-services">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/fugro.png" alt="Fugro Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-bfsi">
+                <span>Fugro</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-bfsi">BFSI & Services</span>
+            <h3 class="customer-title">Fugro</h3>
+            <p class="customer-desc">Enterprise firewall and network security deployment.</p>
+          </div>
+
+          <div class="customer-card" data-cat="bfsi-services">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/policyx.webp" alt="PolicyX Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-bfsi">
+                <span>PolicyX</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-bfsi">BFSI & Services</span>
+            <h3 class="customer-title">PolicyX</h3>
+            <p class="customer-desc">Enterprise end-user computing infrastructure.</p>
+          </div>
+
+          <div class="customer-card" data-cat="bfsi-services">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/orbis.png" alt="Orbis Financial Corporation Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-bfsi">
+                <span>Orbis</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-bfsi">BFSI & Services</span>
+            <h3 class="customer-title">Orbis Financial Corporation</h3>
+            <p class="customer-desc">Enterprise IT infrastructure and technology support services.</p>
+          </div>
+
+          <div class="customer-card" data-cat="bfsi-services">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/pls.jpg" alt="PLS Lawyers Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-bfsi">
+                <span>PLS</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-bfsi">BFSI & Services</span>
+            <h3 class="customer-title">PLS Lawyers Pvt Ltd</h3>
+            <p class="customer-desc">Facility management and IT infrastructure lifecycle management.</p>
+          </div>
+
+          <div class="customer-card" data-cat="bfsi-services">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/hughes.png" alt="Hughes Communications India Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-bfsi">
+                <span>Hughes</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-bfsi">BFSI & Services</span>
+            <h3 class="customer-title">Hughes Communications India</h3>
+            <p class="customer-desc">Enterprise IT infrastructure support and technology services.</p>
+          </div>
+
+          <div class="customer-card" data-cat="bfsi-services">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/hitachi.png" alt="Hitachi Systems India Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-bfsi">
+                <span>Hitachi</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-bfsi">BFSI & Services</span>
+            <h3 class="customer-title">Hitachi Systems India Private Limited</h3>
+            <p class="customer-desc">Virtualization and VMware infrastructure solutions.</p>
+          </div>
+
+          <div class="customer-card" data-cat="bfsi-services">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/tbi.png" alt="Tony Blair Institute Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-bfsi">
+                <span>TBI</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-bfsi">BFSI & Services</span>
+            <h3 class="customer-title">Tony Blair Institute for Global Change</h3>
+            <p class="customer-desc">Hybrid workplace and collaboration infrastructure solutions.</p>
+          </div>
+
+          <!-- ==================== HEALTHCARE & PHARMA ==================== -->
+          <div class="customer-card" data-cat="healthcare-pharma">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/mankind.png" alt="Mankind Pharma Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-health">
+                <span>Mankind</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-health">Healthcare & Pharma</span>
+            <h3 class="customer-title">Mankind Pharma</h3>
+            <p class="customer-desc">Provided security infrastructure, endpoint computing, enterprise end-user computing, and annual support services.</p>
+          </div>
+
+          <div class="customer-card" data-cat="healthcare-pharma">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/stanford.png" alt="Stanford Laboratories Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-health">
+                <span>Stanford</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-health">Healthcare & Pharma</span>
+            <h3 class="customer-title">STANFORD LABORATORIES PVT. LTD.</h3>
+            <p class="customer-desc">Enterprise server infrastructure deployment.</p>
+          </div>
+
+          <!-- ==================== EDUCATION, TRAVEL & CONSUMER ==================== -->
+          <div class="customer-card" data-cat="education-consumer">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/lbs.png" alt="Shri Lal Bahadur Shastri National Sanskrit University Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-edu">
+                <span>LBS</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-edu">Education & Consumer</span>
+            <h3 class="customer-title">Shri Lal Bahadur Shastri National Sanskrit University</h3>
+            <p class="customer-desc">Server, storage, and campus infrastructure modernization.</p>
+          </div>
+
+          <div class="customer-card" data-cat="education-consumer">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/mdi.jpg" alt="Management Development Institute Gurgaon Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-edu">
+                <span>MDI</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-edu">Education & Consumer</span>
+            <h3 class="customer-title">Management Development Institute Gurgaon</h3>
+            <p class="customer-desc">Compute infrastructure and end-user technology deployment.</p>
+          </div>
+
+          <div class="customer-card" data-cat="education-consumer">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/nid.png" alt="National Institute of Design Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-edu">
+                <span>NID</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-edu">Education & Consumer</span>
+            <h3 class="customer-title">National Institute of Design</h3>
+            <p class="customer-desc">IT infrastructure maintenance and support services.</p>
+          </div>
+
+          <div class="customer-card" data-cat="education-consumer">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/housing.jpg" alt="Housing.com Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-edu">
+                <span>Housing</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-edu">Education & Consumer</span>
+            <h3 class="customer-title">Housing.com</h3>
+            <p class="customer-desc">Campus networking infrastructure deployment.</p>
+          </div>
+
+          <div class="customer-card" data-cat="education-consumer">
+            <div class="customer-logo-box">
+              <img src="assets/logos/customers/united.jpg" alt="United Airlines Logo" class="customer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="customer-logo-fallback fallback-edu">
+                <span>United</span>
+              </div>
+            </div>
+            <span class="customer-badge badge-edu">Education & Consumer</span>
+            <h3 class="customer-title">United Airlines</h3>
+            <p class="customer-desc">End-user technology and workplace productivity infrastructure.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section section-dark text-center">
+      <div class="container stack stack-md" style="max-width: 600px; margin: 0 auto;">
+        <h2>Ready to align your project goals?</h2>
+        <p>Contact our Nehru Place integration desk to setup a solution briefing and explore reference delivery architectures.</p>
+        <div style="margin-top: var(--space-4);">
+          <a href="contact.html" class="btn btn-secondary">Contact Sales & Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col stack">
+        <a href="index.html" class="logo">
+          <img src="assets/logos/jsr.png" alt="JSR NetSol Logo" class="logo-img">
+          <span class="logo-text" style="color: var(--color-text-dark-primary);">JSR <span style="color: var(--color-secondary);">NetSol</span></span>
+        </a>
+        <p style="margin-top: var(--space-4);">
+          Enterprise-grade IT infrastructure, security engineering, and multi-OEM system integration. Pan-India SLA delivery since 2016.
+        </p>
+      </div>
+
+      <div class="footer-col stack">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="solutions.html" class="footer-link">Solutions</a></li>
+          <li><a href="customers.html" class="footer-link">Customers</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col stack">
+        <h3>Key Solutions</h3>
+        <ul class="footer-links">
+          <li><a href="solutions.html" class="footer-link">Data Center Design</a></li>
+          <li><a href="solutions.html" class="footer-link">Enterprise Networking</a></li>
+          <li><a href="solutions.html" class="footer-link">Cybersecurity Defense</a></li>
+          <li><a href="solutions.html" class="footer-link">Backup & Disaster Recovery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col stack">
+        <h3>Contact Info</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91-9810078409</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>sales@jsrnetsol.com</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Nehru Place, New Delhi, India</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="footer-copy">&copy; 2026 JSR NetSol Private Limited. All Rights Reserved. ISO 9001:2015, ISO 27001:2022, & ISO 14001:2014 Certified.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  
+  <!-- Customers Filtering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.customer-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Toggle active class
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const category = btn.getAttribute('data-filter');
+
+          cards.forEach(card => {
+            const cardCat = card.getAttribute('data-cat');
+            if (category === 'all' || cardCat === category) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
