@@ -1133,45 +1133,45 @@ textarea.form-control {
   padding: 0.15rem 0.4rem;
   border-radius: var(--radius-full);
 }
-.badge-gov {
+.badge-gov-public {
   background-color: rgba(37, 99, 235, 0.08);
   color: var(--color-primary);
 }
-.badge-mfg {
+.badge-mfg-industrial {
   background-color: rgba(245, 158, 11, 0.08);
   color: #d97706;
 }
-.badge-bfsi {
+.badge-bfsi-services {
   background-color: rgba(6, 182, 212, 0.08);
   color: var(--color-secondary-hover);
 }
-.badge-health {
+.badge-healthcare-lifesciences {
   background-color: rgba(239, 68, 68, 0.08);
   color: #dc2626;
 }
-.badge-edu {
+.badge-commercial-infra {
   background-color: rgba(99, 102, 241, 0.08);
   color: #4f46e5;
 }
 
 /* Fallback Initials Color Coding */
-.fallback-gov {
+.fallback-gov-public {
   color: var(--color-primary);
   background-color: rgba(37, 99, 235, 0.04);
 }
-.fallback-mfg {
+.fallback-mfg-industrial {
   color: #d97706;
   background-color: rgba(245, 158, 11, 0.04);
 }
-.fallback-bfsi {
+.fallback-bfsi-services {
   color: var(--color-secondary-hover);
   background-color: rgba(6, 182, 212, 0.04);
 }
-.fallback-health {
+.fallback-healthcare-lifesciences {
   color: #dc2626;
   background-color: rgba(239, 68, 68, 0.04);
 }
-.fallback-edu {
+.fallback-commercial-infra {
   color: #4f46e5;
   background-color: rgba(99, 102, 241, 0.04);
 }
