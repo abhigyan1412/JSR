@@ -5,7 +5,7 @@
 * [cite_start]JSR NetSol designs, deploys, and supports IT infrastructure and cybersecurity for enterprises across India — vendor-neutral across Multiple OEMs, with certified engineering and documented SLAs from assessment through managed services. [cite: 4]
 * Vendor-Neutral by Design: Multiple OEM authorisations. [cite_start]We recommend based on fit and performance — not commission preference. [cite: 10, 11]
 * [cite_start]End-to-End Accountability: From scoping and design to deployment, AMC, and L3 support — one partner, full lifecycle ownership. [cite: 12, 13]
-* [cite_start]Certified Engineering Team: In-house architects holding active certifications from Dell, Cisco, HPE, VMware, NetApp, Fortinet, and more. [cite: 14, 15]
+* [cite_start]Certified Engineering Team: In-house architects holding active certifications from Dell, Arista, HPE, VMware, NetApp, Fortinet, and more. [cite: 14, 15]
 * [cite_start]Pan-India Delivery & Support: Active customer deployments across 40+ cities with field engineers and spare parts in key locations. [cite: 16, 17]
 
 ## [cite_start]About Us Page [cite: 2]
@@ -13,7 +13,7 @@
 * [cite_start]Over 10 years, we have grown into a full-lifecycle IT infrastructure solutions company — trusted by enterprises, government bodies, healthcare institutions, and financial services firms across India. [cite: 6]
 * We are not a box-mover. [cite_start]Every engagement begins with understanding the customer's business objectives, existing environment, and constraints. [cite: 7]
 * [cite_start]Our certified engineers design, deploy, and support solutions that are right-fit — not oversized, not undersized, and never driven by vendor margin. [cite: 8]
-* [cite_start]With authorised partnerships across multiple leading OEMs — including Dell, HP, HPE, SuperMicro, Lenovo, Asus, Juniper, Aruba, Cisco, Ruckus, Cambium, Fortinet, CheckPoint, OpenText, CrowdStrike, D-Link, TP-Link, Sophos, Palo Alto, Schneider, APC, APW — we have the breadth to recommend the best technology for each workload, and the depth to execute and support it. [cite: 9]
+* [cite_start]With authorised partnerships across multiple leading OEMs — including Dell, HP, HPE, SuperMicro, Lenovo, Asus, Juniper, Aruba, Arista, Ruckus, Cambium, Fortinet, CheckPoint, OpenText, CrowdStrike, D-Link, TP-Link, Sophos, Palo Alto, Schneider, APC, APW — we have the breadth to recommend the best technology for each workload, and the depth to execute and support it. [cite: 9]
 * [cite_start]Customer First, Always: Every recommendation is driven by what's right for the customer's environment, budget, and business — not by vendor incentives or margin targets. [cite: 19, 20]
 * Technical Integrity: We will never recommend a solution we haven't validated. [cite_start]Our architects are hands-on practitioners — certifications are a baseline, not a selling point. [cite: 21, 22]
 * Accountable Delivery: We own the outcome, not just the order. [cite_start]Post-deployment performance, SLA adherence, and long-term support are core commitments — not upsells. [cite: 23, 24]

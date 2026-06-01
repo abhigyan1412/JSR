@@ -22,6 +22,21 @@ JSR NetSol delivers end-to-end infrastructure design, supply, implementation, an
 - GeM Vendor (Government e-Marketplace)
 - MSME Registered (Udyam MSME)
 
+### Authorised OEM Partnerships
+The homepage displays the 12 primary OEM logos in this specific order:
+1. Dell Technologies
+2. HPE
+3. Juniper Networks
+4. Arista Networks
+5. Fortinet
+6. CrowdStrike
+7. VMware
+8. Lenovo Enterprise
+9. Palo Alto
+10. Nutanix
+11. CheckPoint
+12. Sophos
+
 ## Enterprise Customers & Case Profiles
 The website highlights case profiles of actual deployments for leading teams in India across five key industries:
 
