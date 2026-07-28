@@ -30,7 +30,7 @@ The homepage displays the 12 primary OEM logos in this specific order:
 4. Arista Networks
 5. Fortinet
 6. CrowdStrike
-7. VMware
+7. Proxmox
 8. Lenovo Enterprise
 9. Palo Alto
 10. Nutanix
@@ -63,7 +63,7 @@ The website highlights case profiles of actual deployments for leading teams in 
 - **Orbis Financial Corporation** – Enterprise IT infrastructure and technology support services.
 - **PLS Lawyers Pvt Ltd** – Facility management and IT infrastructure lifecycle management.
 - **Hughes Communications India** – Enterprise IT infrastructure support and technology services.
-- **Hitachi Systems India Private Limited** – Virtualization and VMware infrastructure solutions.
+- **Hitachi Systems India Private Limited** – Virtualization and Proxmox infrastructure solutions.
 - **Tony Blair Institute for Global Change** – Hybrid workplace and collaboration solutions.
 
 ### Healthcare & Pharmaceuticals

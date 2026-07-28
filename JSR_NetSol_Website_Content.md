@@ -5,7 +5,7 @@
 * [cite_start]JSR NetSol designs, deploys, and supports IT infrastructure and cybersecurity for enterprises across India — vendor-neutral across Multiple OEMs, with certified engineering and documented SLAs from assessment through managed services. [cite: 4]
 * Vendor-Neutral by Design: Multiple OEM authorisations. [cite_start]We recommend based on fit and performance — not commission preference. [cite: 10, 11]
 * [cite_start]End-to-End Accountability: From scoping and design to deployment, AMC, and L3 support — one partner, full lifecycle ownership. [cite: 12, 13]
-* [cite_start]Certified Engineering Team: In-house architects holding active certifications from Dell, Arista, HPE, VMware, NetApp, Fortinet, and more. [cite: 14, 15]
+* [cite_start]Certified Engineering Team: In-house architects holding active certifications from Dell, Arista, HPE, Proxmox, NetApp, Fortinet, and more. [cite: 14, 15]
 * [cite_start]Pan-India Delivery & Support: Active customer deployments across 40+ cities with field engineers and spare parts in key locations. [cite: 16, 17]
 
 ## [cite_start]About Us Page [cite: 2]
@@ -42,7 +42,7 @@
 * [cite_start]Cybersecurity Solutions: Next-Gen Firewall (NGFW), Endpoint Detection & Response, SIEM & SOC Integration, Vulnerability Assessment, Web & Email Security, Zero Trust Architecture. [cite: 359, 361, 363, 365, 367, 369, 371]
 * [cite_start]Servers & Compute Platforms: Rack & Tower Servers, Blade & Modular Systems, GPU & AI Compute, Server Lifecycle Management, HPC Clusters, BoM & Procurement. [cite: 373, 375, 377, 379, 381, 383, 385]
 * [cite_start]Enterprise Storage Solutions: SAN (Storage Area Network), NAS & File Services, All-Flash Arrays (AFA), Object & S3-Compatible Storage, Storage Tiering & ILM, Storage Replication & HA. [cite: 387, 389, 391, 393, 395, 397, 399]
-* [cite_start]Virtualization & Cloud Platforms: Server Virtualisation, Hyperconverged Infrastructure (HCI), Private Cloud (VCF / Cloud Director), Containerisation & Kubernetes, Hybrid Cloud Integration, VDI & Desktop Virtualisation. [cite: 401, 404, 406, 408, 410, 412, 414]
+* [cite_start]Virtualization & Cloud Platforms: Server Virtualisation, Hyperconverged Infrastructure (HCI), Private Cloud (Proxmox VE / Ceph), Containerisation & Kubernetes, Hybrid Cloud Integration, VDI & Desktop Virtualisation. [cite: 401, 404, 406, 408, 410, 412, 414]
 * [cite_start]Backup & Disaster Recovery: Enterprise Backup Solutions, Disaster Recovery Planning, Replication & Continuous Protection, Cloud Backup & BaaS, Backup Compliance & Reporting, Ransomware Recovery. [cite: 416, 418, 420, 422, 424, 426, 428]
 * [cite_start]Wireless & Mobility: Wi-Fi 6 / 6E Deployment, Mobile Device Management (MDM), Centralised WLAN Controller, Guest & Secure Network Access, Location Services & RTLS. [cite: 430, 433, 435, 437, 439, 441]
 * [cite_start]Secure Access & Edge Solutions: SASE (Secure Access Service Edge), Zero Trust Network Access (ZTNA), SD-Branch, Remote Access VPN, IoT Network Segmentation, Privileged Access Management. [cite: 443, 446, 448, 450, 452, 454, 456]
