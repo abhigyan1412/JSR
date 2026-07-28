@@ -3,167 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Founded in 2016, JSR NetSol is an authorized OEM partner delivering certified enterprise IT infrastructure solutions and managed IT services in India.">
-  <title>About JSR NetSol | Enterprise IT Infrastructure</title>
+  <meta name="description" content="Founded in 2016, JSR NetSol is a trusted enterprise IT infrastructure partner delivering compute, storage, cloud, networking, managed services, and cybersecurity across India.">
+  <title>About Us - Enterprise IT Infrastructure Partner | JSR NetSol</title>
   <link rel="icon" type="image/png" href="assets/logos/jsr.png">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
+  <script src="js/config.js"></script>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header class="site-header">
-    <div class="container header-container">
-      <a href="index.html" class="logo" aria-label="JSR NetSol Home">
-        <img src="assets/logos/jsr.png" alt="JSR NetSol Logo" class="logo-img">
-        <span class="logo-text">JSR <span>NetSol</span></span>
-      </a>
-      
-      <nav class="nav-menu" aria-label="Main Navigation">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link active">About Us</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
-          <li><a href="customers.html" class="nav-link">Customers</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="contact.html" class="btn btn-orange btn-sm">Get in Touch</a></li>
-        </ul>
-      </nav>
+  <!-- Dynamic DPDPA Announcement Ribbon (Task 1) -->
+  <div id="dpdpa-ribbon-container"></div>
 
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-        <span class="hamburger"></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Navigation Dropdown Menu -->
-  <div class="mobile-menu" aria-label="Mobile Navigation">
-    <ul class="nav-list">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="about.html" class="nav-link active">About Us</a></li>
-      <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="solutions.html" class="nav-link">Solutions</a></li>
-      <li><a href="customers.html" class="nav-link">Customers</a></li>
-      <li><a href="contact.html" class="nav-link">Contact</a></li>
-      <li><a href="contact.html" class="btn btn-orange">Get in Touch</a></li>
-    </ul>
-  </div>
+  <!-- Dynamic Shared Header (Tasks 2 & 7) -->
+  <div id="site-header-container"></div>
 
   <main>
-    <!-- About Header/History Hero -->
+    <!-- About Header/History Hero (Task 5 Repositioning) -->
     <section class="page-header">
       <div class="container">
         <div class="grid grid-2">
           <div class="stack stack-md">
             <span class="section-label">Our Story</span>
-            <h1 class="page-title">Enterprise IT Infrastructure Partner: Our Story</h1>
+            <h1 class="page-title">Enterprise IT Infrastructure Partner: End-to-End Accountable</h1>
             <p>
-              Founded in 2016, JSR NetSol Private Limited began as a networking and compute reseller in Delhi's Nehru Place technology district. 
+              Founded in 2016, JSR NetSol Private Limited began in New Delhi's technology hub and has expanded into a premier <strong>Enterprise IT Infrastructure Partner</strong> across India.
             </p>
             <p>
-              Over 10 years, we have grown into a full-lifecycle IT infrastructure solutions company — trusted by enterprises, government bodies, healthcare institutions, and financial services firms across India.
+              While cybersecurity forms an essential pillar of our engineering core, our scope spans the entire enterprise technology stack — including server compute, high-availability storage, private/public cloud, campus networking, data center design, and 24/7 managed IT services.
             </p>
             <p class="lead-text text-primary">
-              We are not a box-mover. Every engagement begins with understanding the customer's business objectives, existing environment, and constraints.
+              We are not just a vendor; we act as a long-term technology partner accountable for validated performance and documented SLAs.
             </p>
           </div>
           <div class="card stack stack-md">
-            <h3 class="card-title">Right-Fit Engineering</h3>
+            <h3 class="card-title">Multi-Pillar IT Infrastructure Engineering</h3>
             <p>
-              Our certified engineers design, deploy, and support solutions that are right-fit — not oversized, not undersized, and never driven by vendor margin.
+              Our certified engineering teams design and deploy enterprise workloads across five core operational pillars:
             </p>
-            <hr class="divider">
-            <p class="card-text">
-              With authorised partnerships across multiple leading OEMs — including Dell, HP, HPE, SuperMicro, Lenovo, Asus, Juniper, Aruba, Arista, Ruckus, Cambium, Fortinet, CheckPoint, OpenText, CrowdStrike, D-Link, TP-Link, Sophos, Palo Alto, Schneider, APC, APW — we have the breadth to recommend the best technology for each workload, and the depth to execute and support it.
-            </p>
+            <ul class="stack stack-xs mt-2" style="font-size: var(--fs-sm); list-style: disc; padding-left: 20px;">
+              <li><strong>Enterprise Networking:</strong> Core routing, switches, cabling & wireless.</li>
+              <li><strong>Server, Storage & Virtualisation:</strong> Compute nodes, HCI, Proxmox & VMware.</li>
+              <li><strong>Cloud Solutions:</strong> Public, Private, Dedicated Servers & AI Cloud.</li>
+              <li><strong>Cybersecurity & DPDPA:</strong> Next-Gen Firewalls, ZTNA & Compliance.</li>
+              <li><strong>Managed Services:</strong> Pan-India AMC, FMS & 24/7 technical support.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Core Values Section -->
-    <section class="section">
+    <!-- Trust Stats Counter Strip (Preserved Task 5) -->
+    <section class="section section-dark">
       <div class="container">
-        <div class="section-header center">
+        <div class="grid grid-4 text-center">
+          <div class="metric-card">
+            <div class="metric-value">200+</div>
+            <div class="metric-label">Enterprise Clients</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">40+</div>
+            <div class="metric-label">Cities Deployed</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">10+</div>
+            <div class="metric-label">Years of Excellence</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">98%</div>
+            <div class="metric-label">Client Retention Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership / Management Team Section (Task 5 New Section) -->
+     <!-- <section class="section">
+      <div class="container">
+        <div class="section-header center mb-8">
+          <span class="section-label">Leadership & Expertise</span>
+          <h2 class="section-title">Management & Leadership Team</h2>
+          <p class="section-desc">Guided by veteran technology leaders and senior systems architects with decades of combined enterprise experience.</p>
+        </div>
+
+        <div class="leadership-grid"> -->
+          <!-- Leader 1 -->
+          <!-- <div class="leader-card">
+            <div class="leader-avatar-placeholder">MD</div>
+            <h3 class="leader-name">Managing Director</h3>
+            <span class="leader-role">Chief Executive Officer & Founder</span>
+            <p class="leader-bio">Strategic direction, enterprise partnerships, and corporate vision driving JSR NetSol's pan-India technology integration network.</p>
+          </div> -->
+
+          <!-- Leader 2 -->
+          <!-- <div class="leader-card">
+            <div class="leader-avatar-placeholder">CTO</div>
+            <h3 class="leader-name">Director - Infrastructure & Cloud</h3>
+            <span class="leader-role">Chief Technology Officer</span>
+            <p class="leader-bio">Directs multi-vendor solution architecture, cloud migrations, data center engineering, and L3 technical support teams.</p>
+          </div> -->
+
+          <!-- Leader 3 -->
+          <!-- <div class="leader-card">
+            <div class="leader-avatar-placeholder">CSO</div>
+            <h3 class="leader-name">Head of Cybersecurity & DPDPA</h3>
+            <span class="leader-role">Principal Security Architect</span>
+            <p class="leader-bio">Leads Zero Trust implementations, threat intelligence, DPDPA regulatory readiness assessments, and security operations.</p>
+          </div> -->
+
+          <!-- Leader 4 -->
+          <!-- <div class="leader-card">
+            <div class="leader-avatar-placeholder">VP</div>
+            <h3 class="leader-name">VP - Enterprise Delivery & Operations</h3>
+            <span class="leader-role">Head of Managed Services</span>
+            <p class="leader-bio">Oversees pan-India SLA execution, AMC lifecycle management, logistics, and field support engineering across 40+ cities.</p>
+          </div> -->
+        </div>
+      </div>
+    </section> 
+
+    <!-- Core Values Section -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-header center mb-8">
           <span class="section-label">Core Values</span>
-          <h2 class="section-title">Our Technical Principles as a Cybersecurity System Integrator</h2>
-          <p class="section-desc">Six guiding commitments that drive our client engagement and operational success.</p>
+          <h2 class="section-title">Engineering Excellence & Technical Integrity</h2>
+          <p class="section-desc">Six guiding commitments that drive our client engagements and operational delivery.</p>
         </div>
 
         <div class="grid grid-3">
-          <!-- Value 1 -->
           <div class="card stack">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </div>
             <h3 class="card-title">Customer First, Always</h3>
-            <p class="card-text">Every recommendation is driven by what's right for the customer's environment, budget, and business — not by vendor incentives or margin targets.</p>
+            <p class="card-text">Every recommendation is driven by what's right for the customer's environment, budget, and business objectives.</p>
           </div>
-          
-          <!-- Value 2 -->
           <div class="card stack">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
             <h3 class="card-title">Technical Integrity</h3>
-            <p class="card-text">We will never recommend a solution we haven't validated. Our architects are hands-on practitioners — certifications are a baseline, not a selling point.</p>
+            <p class="card-text">We will never recommend a solution we haven't validated in laboratory testbeds. Certifications are a baseline.</p>
           </div>
-
-          <!-- Value 3 -->
           <div class="card stack">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
             <h3 class="card-title">Accountable Delivery</h3>
-            <p class="card-text">We own the outcome, not just the order. Post-deployment performance, SLA adherence, and long-term support are core commitments — not upsells.</p>
+            <p class="card-text">We own the outcome, not just the order. Post-deployment SLA adherence and long-term support are core commitments.</p>
           </div>
-
-          <!-- Value 4 -->
           <div class="card stack">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <h3 class="card-title">Long-Term Relationships</h3>
-            <p class="card-text">Our 98% customer retention reflects partnerships, not transactions. We invest in understanding your roadmap so infrastructure never becomes a bottleneck.</p>
+            <h3 class="card-title">Long-Term Partnerships</h3>
+            <p class="card-text">Our 98% customer retention reflects deep trust, proactive IT maintenance, and continuous infrastructure alignment.</p>
           </div>
-
-          <!-- Value 5 -->
           <div class="card stack">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10v6M12 2v20M2 10h20M2 16h20"></path></svg>
-            </div>
-            <h3 class="card-title">Continuous Learning</h3>
-            <p class="card-text">Technology evolves rapidly. Our team maintains active OEM certifications and lab environments to stay current — so our customers don't have to manage that risk.</p>
+            <h3 class="card-title">Multi-Vendor Mastery</h3>
+            <p class="card-text">Active certified teams across Dell, HPE, Arista, Juniper, Fortinet, CrowdStrike, Proxmox, and Nutanix.</p>
           </div>
-
-          <!-- Value 6 -->
           <div class="card stack">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-            </div>
-            <h3 class="card-title">Transparent Communication</h3>
-            <p class="card-text">We surface risks, trade-offs, and constraints early. No overpromising — just clear, documented commitments with defined escalation paths when things don't go to plan.</p>
+            <h3 class="card-title">Transparent SLA SLAs</h3>
+            <p class="card-text">We surface risks, trade-offs, and constraints early with clear escalation paths and documented metrics.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trust Certifications Panel (Strategic Dark) -->
-    <section class="section section-dark">
+    <!-- Credentials & Standards Section -->
+    <section class="section section-dark" id="credentials-standards">
       <div class="container">
-        <div class="section-header center">
-          <span class="section-label">Credentials & Standards</span>
-          <h2 class="section-title">Verified Corporate Compliance & Managed IT Services</h2>
-          <p class="section-desc">We implement rigorous management guidelines and hold registered certifications for delivery assurance.</p>
+        <div class="section-header center mb-8">
+          <span class="section-label">Credentials &amp; Standards</span>
+          <h2 class="section-title">Verified Corporate Compliance &amp; Managed IT Services</h2>
+          <p class="section-desc" style="color: var(--color-text-dark-secondary);">We implement rigorous management guidelines and hold registered certifications for delivery assurance.</p>
         </div>
 
         <div class="badge-grid">
-          <!-- ISO 9001 -->
+          <!-- ISO 9001:2015 -->
           <div class="badge-card">
             <div class="badge-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
             </div>
             <div class="badge-info">
               <h4>ISO 9001:2015</h4>
@@ -171,10 +182,10 @@
             </div>
           </div>
 
-          <!-- ISO 14001 -->
+          <!-- ISO 14001:2015 -->
           <div class="badge-card">
             <div class="badge-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-13.9.2c0-1 0-3.5-.1-4M9 22V12"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M7 12l5-5 5 5"/><path d="M12 7v10"/></svg>
             </div>
             <div class="badge-info">
               <h4>ISO 14001:2015</h4>
@@ -182,10 +193,10 @@
             </div>
           </div>
 
-          <!-- ISO 27001 -->
+          <!-- ISO 27001:2022 -->
           <div class="badge-card">
             <div class="badge-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
             <div class="badge-info">
               <h4>ISO 27001:2022</h4>
@@ -196,7 +207,7 @@
           <!-- CMMI Level 5 -->
           <div class="badge-card">
             <div class="badge-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             </div>
             <div class="badge-info">
               <h4>CMMI Level 5</h4>
@@ -207,7 +218,7 @@
           <!-- GeM Vendor -->
           <div class="badge-card">
             <div class="badge-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
             </div>
             <div class="badge-info">
               <h4>GeM Vendor</h4>
@@ -215,10 +226,10 @@
             </div>
           </div>
 
-          <!-- MSME -->
+          <!-- MSME Registered -->
           <div class="badge-card">
             <div class="badge-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
             </div>
             <div class="badge-info">
               <h4>MSME Registered</h4>
@@ -229,113 +240,23 @@
       </div>
     </section>
 
-    <!-- Simple Call to Action -->
-    <section class="section section-muted">
+    <!-- CTA Section -->
+    <section class="section section-dark">
       <div class="container stack stack-md max-width-sm text-center">
-        <h2>Connect With Our Engineers</h2>
-        <p>Let's map out a stable architecture layout tailored to your workload sizes and security compliance needs.</p>
+        <h2>Partner with an Enterprise IT Architect</h2>
+        <p>Let's map out a scalable infrastructure roadmap tailored to your enterprise compute workloads and security requirements.</p>
         <div class="cluster cluster-center mt-4">
-          <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
-          <a href="services.html" class="btn btn-outline">Explore Our Services</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Head Office Location Section -->
-    <section class="section">
-      <div class="container">
-        <div class="grid grid-2" style="align-items: center;">
-          <div class="stack stack-lg">
-            <div class="stack stack-md">
-              <span class="section-label">Our Presence</span>
-              <h2 class="section-title">Head Office: Nehru Place, New Delhi</h2>
-              <p class="section-desc">
-                Located in Nehru Place — India's largest IT hardware and solutions hub — our head office houses our core engineering labs, enterprise sales desk, and OEM channel logistics team.
-              </p>
-            </div>
-            <div class="card stack stack-sm" style="max-width: 480px;">
-              <h3 class="card-title">Office Address</h3>
-              <p class="card-text">
-                M1-M2, Modi Towers, Nehru Place,<br>
-                New Delhi, Delhi 110019, India
-              </p>
-              <div class="cluster mt-4">
-                <a href="https://maps.app.goo.gl/Wc1iHEQ4mhxMVJrD6" target="_blank" rel="noopener" class="btn btn-secondary">
-                  Get Directions
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="map-wrapper">
-            <!-- OpenStreetMap embed around Modi Towers, Nehru Place coordinates (lat: 28.54722, lon: 77.25083) -->
-            <iframe class="map-iframe" src="https://www.openstreetmap.org/export/embed.html?bbox=77.24483%2C28.54322%2C77.25683%2C28.55122&amp;layer=mapnik&amp;marker=28.54722%2C77.25083" title="JSR NetSol Office Map Location, Modi Towers, Nehru Place"></iframe>
-          </div>
+          <button class="btn btn-secondary btn-calendly">Schedule a Consultation</button>
+          <a href="solutions.html" class="btn btn-outline">Explore Solutions Catalog</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer Section -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col stack">
-        <a href="index.html" class="logo">
-          <img src="assets/logos/jsr.png" alt="JSR NetSol Logo" class="logo-img">
-          <span class="logo-text" style="color: var(--color-text-dark-primary);">JSR <span style="color: var(--color-secondary);">NetSol</span></span>
-        </a>
-        <p class="mt-4">
-          Enterprise-grade IT infrastructure, security engineering, and multi-OEM system integration. Pan-India SLA delivery since 2016.
-        </p>
-      </div>
-
-      <div class="footer-col stack">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="about.html" class="footer-link">About Us</a></li>
-          <li><a href="services.html" class="footer-link">Services</a></li>
-          <li><a href="solutions.html" class="footer-link">Solutions</a></li>
-          <li><a href="customers.html" class="footer-link">Customers</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col stack">
-        <h3>Key Solutions</h3>
-        <ul class="footer-links">
-          <li><a href="solutions.html" class="footer-link">Data Center Design</a></li>
-          <li><a href="solutions.html" class="footer-link">Enterprise Networking</a></li>
-          <li><a href="solutions.html" class="footer-link">Cybersecurity Defense</a></li>
-          <li><a href="solutions.html" class="footer-link">Backup & Disaster Recovery</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col stack">
-        <h3>Contact Info</h3>
-        <ul class="footer-contact-list">
-          <li class="footer-contact-item">
-            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span>+91-9810078410</span>
-          </li>
-          <li class="footer-contact-item">
-            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <span>sales@jsrnetsol.com</span>
-          </li>
-          <li class="footer-contact-item">
-            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Nehru Place, New Delhi, India</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p class="footer-copy">&copy; 2026 JSR NetSol Private Limited. All Rights Reserved. ISO 9001:2015, ISO 14001:2015 & ISO 27001:2022 Certified. CMMI Level 5. Udyam MSME Registered & GeM Vendor.</p>
-    </div>
-  </footer>
+  <!-- Dynamic Shared Footer (Tasks 11 & 12) -->
+  <div id="site-footer-container"></div>
 
   <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
 </body>
 </html>

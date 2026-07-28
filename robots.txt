@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /blog.html
+Disallow: /blog-post.html
+Disallow: /lp/
 
 Sitemap: https://jsrnetsol.com/sitemap.xml

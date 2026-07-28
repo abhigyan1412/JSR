@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Structured Cabling & Enterprise Wiring Solutions by JSR NetSol. Certified Cat6, Cat6A copper cabling, fiber optics backbone, and patch panel termination across India.">
+  <title>Structured Cabling & Wiring Solutions | JSR NetSol</title>
+  <link rel="icon" type="image/png" href="../assets/logos/jsr.png">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <script src="../js/config.js"></script>
+</head>
+<body>
+
+  <!-- Dynamic DPDPA Announcement Ribbon (Task 1) -->
+  <div id="dpdpa-ribbon-container"></div>
+
+  <!-- Dynamic Shared Header (Tasks 2 & 7) -->
+  <div id="site-header-container"></div>
+
+  <main>
+    <!-- Breadcrumb Bar -->
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <a href="../index.html">Home</a>
+        <span class="sep">&gt;</span>
+        <a href="../solutions.html">Solutions</a>
+        <span class="sep">&gt;</span>
+        <a href="../solutions.html?cat=networking">Networking</a>
+        <span class="sep">&gt;</span>
+        <span>Structured Cabling & Wiring</span>
+      </div>
+    </div>
+
+    <!-- Service Hero -->
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="stack stack-md">
+          <span class="hero-subtitle">Networking Infrastructure</span>
+          <h1 class="hero-title">Structured Cabling & Passive Wiring Architecture</h1>
+          <p class="hero-desc">
+            High-performance physical layer cabling designed for gigabit speed, low latency, and structured organization across enterprise campuses, data centers, and multi-floor commercial buildings.
+          </p>
+          <div class="cluster">
+            <a href="../contact.html" class="btn btn-secondary">Request a Quote</a>
+            <button class="btn btn-outline btn-calendly">Book a Consultation</button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card stack stack-sm" style="background: rgba(15,23,42,0.9); border-color: rgba(37,99,235,0.4);">
+            <h3 style="color: #ffffff;">Relevant OEM Partners</h3>
+            <div class="oem-partner-mini-strip">
+              <span class="oem-mini-badge">Schneider Electric</span>
+              <span class="oem-mini-badge">APC</span>
+              <span class="oem-mini-badge">APW President</span>
+              <span class="oem-mini-badge">D-Link Enterprise</span>
+              <span class="oem-mini-badge">CommScope / AMP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description & Technical Details Block -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="stack stack-md">
+            <h2>Comprehensive Physical Layer Engineering</h2>
+            <!-- REPLACE: service description -->
+            <p>
+              JSR NetSol designs, installs, and certifies enterprise cabling systems engineered for high-density network environments. From initial floor plan layout to final Fluke cable testing, our certified technicians ensure full compliance with TIA/EIA-568 standards.
+            </p>
+            <ul class="stack stack-xs" style="font-size: var(--fs-sm); list-style: disc; padding-left: 20px;">
+              <li>Cat6, Cat6A, and Cat7 UTP/STP structured copper wiring for gigabit desk drops.</li>
+              <li>Single-mode and multi-mode (OM3/OM4/OM5) fiber optic backbone installation.</li>
+              <li>Server rack management, patch panel dressing, cable tray routing, and labeling.</li>
+              <li>OTDR testing, cable certification reports, and 25-year OEM performance warranty support.</li>
+            </ul>
+          </div>
+
+          <!-- Dual CTA Form Box -->
+          <div class="card stack stack-md" style="background: var(--color-light-surface); border: 1px solid var(--border-light);">
+            <h3>Get a Validated Cabling Proposal</h3>
+            <p style="font-size: var(--fs-sm);">Speak with a senior passive infrastructure architect to schedule a site survey or receive a BoM cost estimate.</p>
+            
+            <form id="contactLeadForm" class="stack stack-sm" novalidate>
+              <input type="text" name="name" class="form-control" placeholder="Full Name *" required>
+              <input type="email" name="email" class="form-control" placeholder="Email Address *" required>
+              <input type="tel" name="phone" class="form-control" placeholder="Phone Number *" required>
+              <input type="text" name="company" class="form-control" placeholder="Company Name *" required>
+              <button type="submit" class="btn btn-primary btn-full mt-2">Request Quote</button>
+            </form>
+            <div id="formSuccessState" class="form-success-state" style="display: none;">
+              <p style="color: var(--color-success); font-weight: 700;">Request submitted successfully!</p>
+            </div>
+            
+            <hr class="divider">
+            <button class="btn btn-outline btn-full btn-calendly">Or Schedule a Call via Calendly</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dynamic Shared Footer (Tasks 11 & 12) -->
+  <div id="site-footer-container"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/components.js"></script>
+</body>
+</html>

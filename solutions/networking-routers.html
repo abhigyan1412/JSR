@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enterprise Router Solutions & BGP/WAN Edge Routing by JSR NetSol. Authorized OEM partner for Juniper Networks, Cisco, and Arista Networks.">
+  <title>Enterprise Routers & WAN Edge Solutions | JSR NetSol</title>
+  <link rel="icon" type="image/png" href="../assets/logos/jsr.png">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <script src="../js/config.js"></script>
+</head>
+<body>
+
+  <!-- Dynamic DPDPA Announcement Ribbon (Task 1) -->
+  <div id="dpdpa-ribbon-container"></div>
+
+  <!-- Dynamic Shared Header (Tasks 2 & 7) -->
+  <div id="site-header-container"></div>
+
+  <main>
+    <!-- Breadcrumb Bar -->
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <a href="../index.html">Home</a>
+        <span class="sep">&gt;</span>
+        <a href="../solutions.html">Solutions</a>
+        <span class="sep">&gt;</span>
+        <a href="../solutions.html?cat=networking">Networking</a>
+        <span class="sep">&gt;</span>
+        <span>Routers & WAN Edge</span>
+      </div>
+    </div>
+
+    <!-- Service Hero -->
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="stack stack-md">
+          <span class="hero-subtitle">Networking Infrastructure</span>
+          <h1 class="hero-title">Enterprise Routers & WAN Edge Infrastructure</h1>
+          <p class="hero-desc">
+            High-throughput edge routing, BGP peering, MPLS mesh integration, and SD-WAN architectures designed for high-availability enterprise networks.
+          </p>
+          <div class="cluster">
+            <a href="../contact.html" class="btn btn-secondary">Request a Quote</a>
+            <button class="btn btn-outline btn-calendly">Book a Consultation</button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card stack stack-sm" style="background: rgba(15,23,42,0.9); border-color: rgba(37,99,235,0.4);">
+            <h3 style="color: #ffffff;">Relevant OEM Partners</h3>
+            <div class="oem-partner-mini-strip">
+              <span class="oem-mini-badge">Juniper Networks</span>
+              <span class="oem-mini-badge">Arista Networks</span>
+              <span class="oem-mini-badge">Fortinet (SD-WAN)</span>
+              <span class="oem-mini-badge">Cisco Enterprise</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description Block -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="stack stack-md">
+            <h2>Scalable WAN Edge Routing & SD-WAN</h2>
+            <!-- REPLACE: service description -->
+            <p>
+              JSR NetSol deploys enterprise routing platforms designed to handle multi-gigabit traffic, encrypted IPsec tunnels, automated WAN failover, and dynamic path selection.
+            </p>
+            <ul class="stack stack-xs" style="font-size: var(--fs-sm); list-style: disc; padding-left: 20px;">
+              <li>Juniper MX Series & Cisco ISR/ASR edge router configuration and deployment.</li>
+              <li>Secure SD-WAN deployment for multi-branch office interconnectivity.</li>
+              <li>Dual-ISP load balancing, automated failover SLAs, and QOS traffic prioritization.</li>
+              <li>24/7 proactive router monitoring, IOS/Junos firmware updates, and AMC support.</li>
+            </ul>
+          </div>
+
+          <!-- Dual CTA Form Box -->
+          <div class="card stack stack-md" style="background: var(--color-light-surface); border: 1px solid var(--border-light);">
+            <h3>Request Router BoM & Pricing</h3>
+            <p style="font-size: var(--fs-sm);">Speak with an Arista/Juniper certified network architect.</p>
+            
+            <form id="contactLeadForm" class="stack stack-sm" novalidate>
+              <input type="text" name="name" class="form-control" placeholder="Full Name *" required>
+              <input type="email" name="email" class="form-control" placeholder="Email Address *" required>
+              <input type="tel" name="phone" class="form-control" placeholder="Phone Number *" required>
+              <input type="text" name="company" class="form-control" placeholder="Company Name *" required>
+              <button type="submit" class="btn btn-primary btn-full mt-2">Request Quote</button>
+            </form>
+            <div id="formSuccessState" class="form-success-state" style="display: none;">
+              <p style="color: var(--color-success); font-weight: 700;">Request submitted successfully!</p>
+            </div>
+            
+            <hr class="divider">
+            <button class="btn btn-outline btn-full btn-calendly">Book Consultation via Calendly</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dynamic Shared Footer (Tasks 11 & 12) -->
+  <div id="site-footer-container"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/components.js"></script>
+</body>
+</html>

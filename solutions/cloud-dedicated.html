@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dedicated Bare Metal Server Solutions by JSR NetSol. Single-tenant hardware servers for databases, ERP, and mission-critical enterprise applications.">
+  <title>Dedicated Bare Metal Servers | JSR NetSol</title>
+  <link rel="icon" type="image/png" href="../assets/logos/jsr.png">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <script src="../js/config.js"></script>
+</head>
+<body>
+
+  <!-- Dynamic DPDPA Announcement Ribbon (Task 1) -->
+  <div id="dpdpa-ribbon-container"></div>
+
+  <!-- Dynamic Shared Header (Tasks 2 & 7) -->
+  <div id="site-header-container"></div>
+
+  <main>
+    <!-- Breadcrumb Bar -->
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <a href="../index.html">Home</a>
+        <span class="sep">&gt;</span>
+        <a href="../solutions.html">Solutions</a>
+        <span class="sep">&gt;</span>
+        <a href="../solutions.html?cat=cloud">Cloud</a>
+        <span class="sep">&gt;</span>
+        <span>Dedicated Bare Metal</span>
+      </div>
+    </div>
+
+    <!-- Service Hero -->
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="stack stack-md">
+          <span class="hero-subtitle">Cloud Solutions</span>
+          <h1 class="hero-title">Dedicated Bare Metal Server Infrastructure</h1>
+          <p class="hero-desc">
+            Single-tenant dedicated hardware servers delivering maximum compute performance, full hardware control, and predictable pricing for intensive database, ERP, and mission-critical applications.
+          </p>
+          <div class="cluster">
+            <a href="../contact.html" class="btn btn-secondary">Request a Quote</a>
+            <button class="btn btn-outline btn-calendly">Book a Consultation</button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card stack stack-sm" style="background: rgba(15,23,42,0.9); border-color: rgba(234,88,12,0.4);">
+            <h3 style="color: #ffffff;">Relevant OEM Partners</h3>
+            <div class="oem-partner-mini-strip">
+              <span class="oem-mini-badge">Dell PowerEdge</span>
+              <span class="oem-mini-badge">HPE ProLiant</span>
+              <span class="oem-mini-badge">Supermicro</span>
+              <span class="oem-mini-badge">Lenovo ThinkSystem</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description Block -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="stack stack-md">
+            <h2>Single-Tenant Hardware for Maximum Performance</h2>
+            <p>
+              JSR NetSol provisions and manages dedicated bare metal servers that deliver full hardware isolation, custom BIOS/RAID configurations, and direct IPMI access. Ideal for latency-sensitive databases, ERP platforms, and compliance-sensitive workloads that cannot share infrastructure.
+            </p>
+            <ul class="stack stack-xs" style="font-size: var(--fs-sm); list-style: disc; padding-left: 20px;">
+              <li>Single-tenant server provisioning with custom CPU, RAM, storage, and NIC configurations.</li>
+              <li>Full IPMI/BMC remote management access for out-of-band server control and monitoring.</li>
+              <li>Custom RAID array configurations (RAID 1/5/6/10) with hardware controller and battery backup.</li>
+              <li>Dedicated network uplinks with VLAN isolation, private interconnects, and bandwidth guarantees.</li>
+            </ul>
+          </div>
+
+          <!-- Dual CTA Form Box -->
+          <div class="card stack stack-md" style="background: var(--color-light-surface); border: 1px solid var(--border-light);">
+            <h3>Get a Bare Metal Server Quote</h3>
+            <p style="font-size: var(--fs-sm);">Speak with an infrastructure specialist to configure a dedicated server for your workload requirements.</p>
+            
+            <form id="contactLeadForm" class="stack stack-sm" novalidate>
+              <input type="text" name="name" class="form-control" placeholder="Full Name *" required>
+              <input type="email" name="email" class="form-control" placeholder="Email Address *" required>
+              <input type="tel" name="phone" class="form-control" placeholder="Phone Number *" required>
+              <input type="text" name="company" class="form-control" placeholder="Company Name *" required>
+              <button type="submit" class="btn btn-primary btn-full mt-2">Request Quote</button>
+            </form>
+            <div id="formSuccessState" class="form-success-state" style="display: none;">
+              <p style="color: var(--color-success); font-weight: 700;">Request submitted successfully!</p>
+            </div>
+            
+            <hr class="divider">
+            <button class="btn btn-outline btn-full btn-calendly">Book Consultation via Calendly</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dynamic Shared Footer (Tasks 11 & 12) -->
+  <div id="site-footer-container"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/components.js"></script>
+</body>
+</html>

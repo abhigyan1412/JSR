@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get in touch with JSR NetSol's Nehru Place office. Talk to our Dell enterprise partner and Arista network integrator teams for sales and support.">
-  <title>Contact JSR NetSol | Nehru Place Enterprise IT Desk</title>
+  <meta name="description" content="Contact JSR NetSol - Enterprise IT infrastructure solutions partner & cybersecurity system integrator in Nehru Place, New Delhi. Call +91-9810078410 or book a consultation online.">
+  <title>Contact Us & Schedule Consultation | JSR NetSol</title>
   <link rel="icon" type="image/png" href="assets/logos/jsr.png">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
+  <script src="js/config.js"></script>
   
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -148,44 +149,11 @@
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header class="site-header">
-    <div class="container header-container">
-      <a href="index.html" class="logo" aria-label="JSR NetSol Home">
-        <img src="assets/logos/jsr.png" alt="JSR NetSol Logo" class="logo-img">
-        <span class="logo-text">JSR <span>NetSol</span></span>
-      </a>
-      
-      <nav class="nav-menu" aria-label="Main Navigation">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
-          <li><a href="customers.html" class="nav-link">Customers</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
-          <li><a href="contact.html" class="btn btn-orange btn-sm">Get in Touch</a></li>
-        </ul>
-      </nav>
+  <!-- Dynamic DPDPA Announcement Ribbon (Task 1) -->
+  <div id="dpdpa-ribbon-container"></div>
 
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-        <span class="hamburger"></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Navigation Dropdown Menu -->
-  <div class="mobile-menu" aria-label="Mobile Navigation">
-    <ul class="nav-list">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="about.html" class="nav-link">About Us</a></li>
-      <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="solutions.html" class="nav-link">Solutions</a></li>
-      <li><a href="customers.html" class="nav-link">Customers</a></li>
-      <li><a href="contact.html" class="nav-link active">Contact</a></li>
-      <li><a href="contact.html" class="btn btn-orange">Get in Touch</a></li>
-    </ul>
-  </div>
+  <!-- Dynamic Shared Header (Tasks 2 & 7) -->
+  <div id="site-header-container"></div>
 
   <main>
     <!-- Contact Header Section -->
@@ -195,7 +163,7 @@
           <span class="section-label">Connect with Us</span>
           <h1 class="page-title">Contact JSR NetSol: Enterprise IT Infrastructure Solutions</h1>
           <p class="section-desc">
-            Reach out directly to our Nehru Place sales desk or escalation helpline to address project designs and active AMC tickets.
+            Reach out directly to our Nehru Place sales desk or schedule an instant consultation call with senior infrastructure architects.
           </p>
         </div>
       </div>
@@ -252,86 +220,104 @@
 
             <!-- Map Embed -->
             <div class="map-wrapper">
-              <!-- OpenStreetMap embed around Modi Towers, Nehru Place coordinates (lat: 28.54722, lon: 77.25083) -->
               <iframe class="map-iframe" src="https://www.openstreetmap.org/export/embed.html?bbox=77.24483%2C28.54322%2C77.25683%2C28.55122&amp;layer=mapnik&amp;marker=28.54722%2C77.25083" title="JSR NetSol Office Map Location, Modi Towers, Nehru Place"></iframe>
             </div>
 
           </div>
 
-          <!-- Column 2: Lead Gen Form -->
+          <!-- Column 2: Tabbed Lead Gen Form vs Calendly Embed (Task 4) -->
           <div class="stack">
             <div class="lead-form-box">
-              <h3>Request a Consultation</h3>
-              <p>Provide details on your compute requirements, and our engineers will outline a validated proposal.</p>
-              
-              <form id="contactLeadForm" novalidate>
-                <div class="form-group">
-                  <label class="form-label" for="contactName">Full Name *</label>
-                  <input type="text" id="contactName" name="name" class="form-control" placeholder="Enter your full name" required>
-                </div>
+              <div class="contact-tabs">
+                <button class="tab-btn active" id="tabSendMsgBtn">Send a Message</button>
+                <button class="tab-btn" id="tabBookCallBtn">Book a Call (Calendly)</button>
+              </div>
+
+              <!-- Tab Pane 1: Message Form -->
+              <div class="tab-pane active" id="paneSendMsg">
+                <h3>Request a Consultation</h3>
+                <p>Provide details on your compute requirements, and our engineers will outline a validated proposal.</p>
                 
-                <div class="form-grid form-grid-2">
+                <form id="contactLeadForm" novalidate>
                   <div class="form-group">
-                    <label class="form-label" for="contactCompany">Company Name *</label>
-                    <input type="text" id="contactCompany" name="company" class="form-control" placeholder="Your organization" required>
+                    <label class="form-label" for="contactName">Full Name *</label>
+                    <input type="text" id="contactName" name="name" class="form-control" placeholder="Enter your full name" required>
                   </div>
-                  <div class="form-group">
-                    <label class="form-label" for="contactRole">Designation / Role *</label>
-                    <input type="text" id="contactRole" name="role" class="form-control" placeholder="e.g. CIO, IT Manager" required>
+                  
+                  <div class="form-grid form-grid-2">
+                    <div class="form-group">
+                      <label class="form-label" for="contactCompany">Company Name *</label>
+                      <input type="text" id="contactCompany" name="company" class="form-control" placeholder="Your organization" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="contactRole">Designation / Role *</label>
+                      <input type="text" id="contactRole" name="role" class="form-control" placeholder="e.g. CIO, IT Manager" required>
+                    </div>
                   </div>
-                </div>
 
-                <div class="form-grid form-grid-2">
-                  <div class="form-group">
-                    <label class="form-label" for="contactEmail">Email Address *</label>
-                    <input type="email" id="contactEmail" name="email" class="form-control" placeholder="name@company.com" required>
+                  <div class="form-grid form-grid-2">
+                    <div class="form-group">
+                      <label class="form-label" for="contactEmail">Email Address *</label>
+                      <input type="email" id="contactEmail" name="email" class="form-control" placeholder="name@company.com" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="contactPhone">Phone Number *</label>
+                      <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="10-digit mobile number" required>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label class="form-label" for="contactPhone">Phone Number *</label>
-                    <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="10-digit mobile number" required>
+
+                  <div class="form-grid form-grid-2">
+                    <div class="form-group">
+                      <label class="form-label" for="contactCity">City *</label>
+                      <input type="text" id="contactCity" name="city" class="form-control" placeholder="e.g. New Delhi" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="contactInterest">Interest Area *</label>
+                      <select id="contactInterest" name="interest" class="form-control" required>
+                        <option value="">Select an option</option>
+                        <option value="compute">Compute & Servers</option>
+                        <option value="storage">Enterprise Storage</option>
+                        <option value="network">Campus Networking</option>
+                        <option value="security">Cybersecurity & Zero Trust</option>
+                        <option value="dpdpa">DPDPA Compliance Assessment</option>
+                        <option value="cloud">Cloud Solutions</option>
+                        <option value="virtualization">Virtualization & Private Cloud</option>
+                        <option value="bcdr">Backup & Disaster Recovery</option>
+                        <option value="amc">Managed Services & AMC</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
-                <div class="form-grid form-grid-2">
                   <div class="form-group">
-                    <label class="form-label" for="contactCity">City *</label>
-                    <input type="text" id="contactCity" name="city" class="form-control" placeholder="e.g. New Delhi" required>
+                    <label class="form-label" for="contactMessage">Project Message (Optional)</label>
+                    <textarea id="contactMessage" name="message" class="form-control" placeholder="Briefly describe your environment, workload size, or specific requirements..."></textarea>
                   </div>
-                  <div class="form-group">
-                    <label class="form-label" for="contactInterest">Interest Area *</label>
-                    <select id="contactInterest" name="interest" class="form-control" required>
-                      <option value="">Select an option</option>
-                      <option value="compute">Compute & Servers</option>
-                      <option value="storage">Enterprise Storage</option>
-                      <option value="network">Campus Networking</option>
-                      <option value="security">Cybersecurity & Zero Trust</option>
-                      <option value="virtualization">Virtualization & Private Cloud</option>
-                      <option value="bcdr">Backup & Disaster Recovery</option>
-                      <option value="amc">Managed Services & AMC</option>
-                    </select>
+
+                  <button type="submit" class="btn btn-primary w-full mt-2">
+                    Submit Request
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="11" y2="6"></line><polyline points="5 6 11 6 11 12"></polyline></svg>
+                  </button>
+                </form>
+
+                <!-- Custom Form Success State -->
+                <div id="formSuccessState" class="form-success-state" style="display: none;">
+                  <div class="success-icon-box">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
+                  <h3>Request Submitted</h3>
+                  <p>
+                    Thank you. Your consultation request has been received. Our senior infrastructure engineer will contact you shortly to review your requirements.
+                  </p>
                 </div>
+              </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="contactMessage">Project Message (Optional)</label>
-                  <textarea id="contactMessage" name="message" class="form-control" placeholder="Briefly describe your environment, workload size, or specific requirements..."></textarea>
+              <!-- Tab Pane 2: Calendly Inline Booking (Task 4) -->
+              <div class="tab-pane" id="paneBookCall">
+                <h3>Schedule a Direct Consultation</h3>
+                <p>Pick a slot on our calendar to speak directly with an enterprise solutions architect.</p>
+                <div class="calendly-inline-box mt-4">
+                  <iframe id="calendlyInlineIframe" src="https://calendly.com/jsrnetsol/consultation" width="100%" height="520" frameborder="0"></iframe>
                 </div>
-
-                <button type="submit" class="btn btn-primary w-full mt-2">
-                  Submit Request
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="11" y2="6"></line><polyline points="5 6 11 6 11 12"></polyline></svg>
-                </button>
-              </form>
-
-              <!-- Custom Form Success State -->
-              <div id="formSuccessState" class="form-success-state">
-                <div class="success-icon-box">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <h3>Request Submitted</h3>
-                <p>
-                  Thank you. Your consultation request has been received. Our senior infrastructure engineer will contact you shortly to review your requirements.
-                </p>
               </div>
 
             </div>
@@ -342,65 +328,40 @@
     </section>
   </main>
 
-  <!-- Footer Section -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col stack">
-        <a href="index.html" class="logo">
-          <img src="assets/logos/jsr.png" alt="JSR NetSol Logo" class="logo-img">
-          <span class="logo-text" style="color: var(--color-text-dark-primary);">JSR <span style="color: var(--color-secondary);">NetSol</span></span>
-        </a>
-        <p class="mt-4">
-          Enterprise-grade IT infrastructure, security engineering, and multi-OEM system integration. Pan-India SLA delivery since 2016.
-        </p>
-      </div>
-
-      <div class="footer-col stack">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="about.html" class="footer-link">About Us</a></li>
-          <li><a href="services.html" class="footer-link">Services</a></li>
-          <li><a href="solutions.html" class="footer-link">Solutions</a></li>
-          <li><a href="customers.html" class="footer-link">Customers</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col stack">
-        <h3>Key Solutions</h3>
-        <ul class="footer-links">
-          <li><a href="solutions.html" class="footer-link">Data Center Design</a></li>
-          <li><a href="solutions.html" class="footer-link">Enterprise Networking</a></li>
-          <li><a href="solutions.html" class="footer-link">Cybersecurity Defense</a></li>
-          <li><a href="solutions.html" class="footer-link">Backup & Disaster Recovery</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col stack">
-        <h3>Contact Info</h3>
-        <ul class="footer-contact-list">
-          <li class="footer-contact-item">
-            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span>+91-9810078410</span>
-          </li>
-          <li class="footer-contact-item">
-            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <span>sales@jsrnetsol.com</span>
-          </li>
-          <li class="footer-contact-item">
-            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Nehru Place, New Delhi, India</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p class="footer-copy">&copy; 2026 JSR NetSol Private Limited. All Rights Reserved. ISO 9001:2015, ISO 14001:2015 & ISO 27001:2022 Certified. CMMI Level 5. Udyam MSME Registered & GeM Vendor.</p>
-    </div>
-  </footer>
+  <!-- Dynamic Shared Footer (Tasks 11 & 12) -->
+  <div id="site-footer-container"></div>
 
   <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+  <script>
+    // Tab switching logic for contact form vs calendly
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabMsg = document.getElementById('tabSendMsgBtn');
+      const tabCall = document.getElementById('tabBookCallBtn');
+      const paneMsg = document.getElementById('paneSendMsg');
+      const paneCall = document.getElementById('paneBookCall');
+
+      if (tabMsg && tabCall && paneMsg && paneCall) {
+        tabMsg.addEventListener('click', () => {
+          tabMsg.classList.add('active');
+          tabCall.classList.remove('active');
+          paneMsg.classList.add('active');
+          paneCall.classList.remove('active');
+        });
+
+        tabCall.addEventListener('click', () => {
+          tabCall.classList.add('active');
+          tabMsg.classList.remove('active');
+          paneCall.classList.add('active');
+          paneMsg.classList.remove('active');
+          
+          const iframe = document.getElementById('calendlyInlineIframe');
+          if (iframe && window.JSR_CONFIG) {
+            iframe.src = window.JSR_CONFIG.calendlyUrl;
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
