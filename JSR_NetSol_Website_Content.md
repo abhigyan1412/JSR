@@ -2,8 +2,8 @@
 
 ## Global Messaging & Home Page
 * Enterprise Integrator. [cite_start]Accountable End-to-End. [cite: 3]
-* [cite_start]JSR NetSol designs, deploys, and supports IT infrastructure and cybersecurity for enterprises across India — vendor-neutral across Multiple OEMs, with certified engineering and documented SLAs from assessment through managed services. [cite: 4]
-* Vendor-Neutral by Design: Multiple OEM authorisations. [cite_start]We recommend based on fit and performance — not commission preference. [cite: 10, 11]
+* JSR NetSol designs, deploys, and supports IT infrastructure and cybersecurity for enterprises across India — integrating solutions across Multiple OEMs, with certified engineering and documented SLAs from assessment through managed services.
+* Multi-Vendor Architecture: Multiple OEM authorisations. We recommend based on fit and performance — not commission preference.
 * [cite_start]End-to-End Accountability: From scoping and design to deployment, AMC, and L3 support — one partner, full lifecycle ownership. [cite: 12, 13]
 * [cite_start]Certified Engineering Team: In-house architects holding active certifications from Dell, Arista, HPE, Proxmox, NetApp, Fortinet, and more. [cite: 14, 15]
 * [cite_start]Pan-India Delivery & Support: Active customer deployments across 40+ cities with field engineers and spare parts in key locations. [cite: 16, 17]

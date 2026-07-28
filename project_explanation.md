@@ -71,7 +71,7 @@ JSR/
 
 The site consists of 6 primary user-facing pages, plus 1 transactional outreach template:
 
-1. **[Home (index.html)](file:///c:/Users/Abhigyan%20Gupta/OneDrive%20-%20JSR%20NetSol%20Pvt%20Ltd/JSR/index.html)**: High-level overview of value proposition (vendor-neutral design, certified engineering, pan-India support), corporate credentials, OEM partnerships, and a summary of core capabilities.
+1. **[Home (index.html)](file:///c:/Users/Abhigyan%20Gupta/OneDrive%20-%20JSR%20NetSol%20Pvt%20Ltd/JSR/index.html)**: High-level overview of value proposition (multi-vendor architecture, certified engineering, pan-India support), corporate credentials, OEM partnerships, and a summary of core capabilities.
 2. **[About Us (about.html)](file:///c:/Users/Abhigyan%20Gupta/OneDrive%20-%20JSR%20NetSol%20Pvt%20Ltd/JSR/about.html)**: Deep dive into the company's timeline (established in 2016 in Nehru Place), core values, compliance certifications, and customer-first approach.
 3. **[Services (services.html)](file:///c:/Users/Abhigyan%20Gupta/OneDrive%20-%20JSR%20NetSol%20Pvt%20Ltd/JSR/services.html)**: Detailed layout of JSR NetSol's 6 service pillars:
    * Consulting & Solution Design
