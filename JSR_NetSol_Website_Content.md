@@ -1,7 +1,7 @@
 # [cite_start]JSR NetSol Website Content [cite: 1]
 
 ## Global Messaging & Home Page
-* Enterprise Integrator. [cite_start]Accountable End-to-End. [cite: 3]
+* Enterprise Integrator. [cite_start]End-to-End Accountable. [cite: 3]
 * JSR NetSol designs, deploys, and supports IT infrastructure and cybersecurity for enterprises across India — integrating solutions across Multiple OEMs, with certified engineering and documented SLAs from assessment through managed services.
 * Multi-Vendor Architecture: Multiple OEM authorisations. We recommend based on fit and performance — not commission preference.
 * [cite_start]End-to-End Accountability: From scoping and design to deployment, AMC, and L3 support — one partner, full lifecycle ownership. [cite: 12, 13]
