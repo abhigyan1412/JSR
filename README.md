@@ -1,5 +1,7 @@
 # JSR NetSol Pvt. Ltd. — Enterprise Website
 
+
+
 This repository contains the marketing website and client-engagement portal for **JSR NetSol Pvt. Ltd.**, an enterprise IT infrastructure system integrator and cybersecurity specialist based in Nehru Place, New Delhi.
 
 The project is structured as a high-performance, responsive, static multi-page website utilizing semantic HTML5, modular CSS3 (using design tokens and layout primitives), and client-side JavaScript.
