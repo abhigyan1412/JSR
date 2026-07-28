@@ -65,7 +65,7 @@
 * [cite_start]IFFCO Tokio: Delivered routing and switching infrastructure across 50+ locations to support secure and reliable multi-site connectivity. [cite: 115, 116]
 
 ## [cite_start]Contact Page [cite: 60]
-* Sales: New projects, tenders, BoM, procurement, and solution design for enterprise infrastructure and security programmes. [cite_start]+91-9810078409. sales@jsrnetsol.com. [cite: 64, 65, 66, 73]
-* Support: AMC, break-fix, managed services, and post-deployment escalation for active customer accounts. [cite_start]+91-9810078409 (Option 2). [cite: 68, 69, 70]
-* [cite_start]Head Office — Nehru Place, New Delhi: M1-M2, Modi Towers, Nehru Place · +91-9810078409. [cite: 43, 44, 71]
+* Sales: New projects, tenders, BoM, procurement, and solution design for enterprise infrastructure and security programmes. +91-9810078410. sales@jsrnetsol.com.
+* Support: AMC, break-fix, managed services, and post-deployment escalation for active customer accounts. +91-9810078410 (Option 2).
+* Head Office — Nehru Place, New Delhi: M1-M2, Modi Towers, Nehru Place · +91-9810078410.
 * Located in Nehru Place — India's largest IT hardware and solutions market — with direct access to OEM logistics and engineering resources. (Include interactive map embed)[cite_start]. [cite: 74, 75]
