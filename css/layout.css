@@ -84,11 +84,17 @@ img {
   }
 }
 
-/* Dark mode theme section modifier */
+/* Dark mode theme section modifier with rich static ambient glow */
 .section-dark {
-  background-color: var(--color-dark-bg);
+  background: radial-gradient(circle at 15% 25%, rgba(37, 99, 235, 0.15), transparent 50%),
+              radial-gradient(circle at 85% 75%, rgba(234, 88, 12, 0.14), transparent 55%),
+              linear-gradient(180deg, #0b0f19 0%, #0f172a 100%);
   color: var(--color-text-dark-primary);
+  position: relative;
+  border-top: 1px solid rgba(6, 182, 212, 0.25);
+  border-bottom: 1px solid rgba(234, 88, 12, 0.25);
 }
+
 .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 {
   color: var(--color-text-dark-primary);
 }
@@ -96,9 +102,28 @@ img {
   color: var(--color-text-dark-secondary);
 }
 
-/* Muted light theme section modifier */
+/* Muted light theme section modifier with rich vibrant warm & cyan contour blend */
 .section-muted {
-  background-color: var(--color-light-surface);
+  background: linear-gradient(135deg, #f0f7ff 0%, #fff7ed 50%, #f0fdfa 100%);
+  border-top: 1px solid rgba(234, 88, 12, 0.2);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+  position: relative;
+}
+
+/* Dynamic Section Contour Line Separator - Static & Vibrant */
+.section-contour {
+  position: relative;
+}
+
+.section-contour::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb 0%, #ea580c 50%, #06b6d4 100%);
+  box-shadow: 0 0 12px rgba(234, 88, 12, 0.3);
 }
 
 /* 3. Stack - Vertical flow primitive */
