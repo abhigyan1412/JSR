@@ -100,8 +100,7 @@ function renderHeader() {
     { name: 'Services', href: `${prefix}services.html` },
     { name: 'DPDPA Compliance', href: `${prefix}dpdpa-compliance.html`, highlight: true },
     { name: 'Solutions', href: `${prefix}solutions.html` },
-    { name: 'Customers', href: `${prefix}customers.html` },
-    { name: 'Contact', href: `${prefix}contact.html` }
+    { name: 'Customers', href: `${prefix}customers.html` }
   ];
 
   const buildNavLinks = (isMobile = false) => {
