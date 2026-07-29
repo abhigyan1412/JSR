@@ -6,6 +6,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   renderDPDPARibbon();
   renderHeader();
+  initMobileNavigation();
+  initStickyHeader();
+  initActiveNavHighlight();
   renderFooter();
   renderLightboxModal();
   renderCalendlyModal();

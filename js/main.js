@@ -1,10 +1,6 @@
 /* Main Interactions & Enhancements for JSR NetSol Website */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize standard features
-  initStickyHeader();
-  initMobileNavigation();
-  initActiveNavHighlight();
   initContactFormValidation();
 });
 
