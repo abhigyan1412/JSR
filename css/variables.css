@@ -30,7 +30,17 @@
   --color-accent-orange-hover: #c2410c;
   --color-accent-orange-bright: #f97316;
   --color-success: #10b981;       /* Safe green */
+  --color-error: #ef4444;         /* Error red */
   --color-info: #3b82f6;
+
+  /* Category Colors */
+  --color-cat-networking: #2563eb;
+  --color-cat-server-storage: #0284c7;
+  --color-cat-cloud: #ea580c;
+  --color-cat-cybersecurity: #dc2626;
+  --color-cat-mfg: #d97706;
+  --color-cat-healthcare: #dc2626;
+  --color-cat-commercial: #4f46e5;
   
   /* Borders */
   --border-light: #e2e8f0;
@@ -65,7 +75,9 @@
   --space-2: 0.5rem;   /* 8px */
   --space-3: 0.75rem;  /* 12px */
   --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
   --space-6: 1.5rem;   /* 24px */
+  --space-7: 1.75rem;  /* 28px */
   --space-8: 2rem;     /* 32px */
   --space-12: 3rem;    /* 48px */
   --space-16: 4rem;    /* 64px */
@@ -86,6 +98,7 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.15);
+  --shadow-xl2: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-orange-glow: 0 0 24px rgba(234, 88, 12, 0.25);
 
   /* Animation transitions */

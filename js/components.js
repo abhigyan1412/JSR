@@ -113,7 +113,7 @@ function renderHeader() {
       if (currentPath.endsWith(hrefBase) || (hrefBase === 'index.html' && (currentPath.endsWith('/') || currentPath.endsWith('JSR/')))) {
         activeClass = 'active';
       }
-      const specialStyle = item.highlight ? 'style="color: #ea580c; font-weight: 700;"' : '';
+      const specialStyle = item.highlight ? 'style="color: var(--color-accent-orange); font-weight: 700;"' : '';
       return `<li><a href="${item.href}" class="nav-link ${activeClass}" ${specialStyle}>${item.name}</a></li>`;
     }).join('') + `<li><a href="${prefix}contact.html" class="btn btn-orange ${isMobile ? '' : 'btn-sm'}">Get in Touch</a></li>`;
   };
@@ -161,26 +161,26 @@ function renderFooter() {
         <div class="footer-col stack">
           <a href="${prefix}index.html" class="logo">
             <img src="${prefix}assets/logos/jsr.png" alt="JSR NetSol Logo" class="logo-img">
-            <span class="logo-text" style="color: var(--color-text-dark-primary);">JSR <span style="color: var(--color-secondary);">NetSol</span></span>
+            <span class="logo-text footer-logo-text">JSR <span>NetSol</span></span>
           </a>
           <p class="mt-4">
             Enterprise IT Infrastructure Partner, Security Engineering & Multi-OEM Integration. Pan-India SLA Delivery Since 2016.
           </p>
           <!-- Social Media Handles (Task 12) -->
           <div class="footer-social-links">
-            <a href="#" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+            <a href="https://www.linkedin.com/company/jsrnetsol" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="#" class="social-icon-btn" aria-label="X (Twitter)" title="X / Twitter">
+            <a href="https://x.com/jsrnetsol" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)" title="X / Twitter">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
             </a>
-            <a href="#" class="social-icon-btn" aria-label="Facebook" title="Facebook">
+            <a href="https://www.facebook.com/jsrnetsol" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook" title="Facebook">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="#" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+            <a href="https://www.instagram.com/jsrnetsol" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram" title="Instagram">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
-            <a href="#" class="social-icon-btn" aria-label="YouTube" title="YouTube">
+            <a href="https://www.youtube.com/@jsrnetsol" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube" title="YouTube">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
             </a>
           </div>
@@ -192,7 +192,7 @@ function renderFooter() {
             <li><a href="${prefix}index.html" class="footer-link">Home</a></li>
             <li><a href="${prefix}about.html" class="footer-link">About Us</a></li>
             <li><a href="${prefix}services.html" class="footer-link">Services</a></li>
-            <li><a href="${prefix}dpdpa-compliance.html" class="footer-link" style="color: #ea580c;">DPDPA Compliance</a></li>
+            <li><a href="${prefix}dpdpa-compliance.html" class="footer-link footer-link-highlight">DPDPA Compliance</a></li>
             <li><a href="${prefix}solutions.html" class="footer-link">Solutions Catalog</a></li>
             <li><a href="${prefix}customers.html" class="footer-link">Customers</a></li>
             <li><a href="${prefix}contact.html" class="footer-link">Contact</a></li>
@@ -223,7 +223,7 @@ function renderFooter() {
             </li>
             <li class="footer-contact-item">
               <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span>Nehru Place, New Delhi, India</span>
+              <span>M1-M2, Modi Towers, Nehru Place, New Delhi 110019</span>
             </li>
           </ul>
         </div>
@@ -241,7 +241,7 @@ function renderFooter() {
       </div>
 
       <div class="container footer-bottom">
-        <p class="footer-copy">&copy; 2026 JSR NetSol Private Limited. All Rights Reserved. ISO 9001:2015, ISO 14001:2015 & ISO 27001:2022 Certified. CMMI Level 5. Udyam MSME Registered & GeM Vendor.</p>
+        <p class="footer-copy">&copy; ${new Date().getFullYear()} JSR NetSol Private Limited. All Rights Reserved. ISO 9001:2015, ISO 14001:2015 & ISO 27001:2022 Certified. CMMI Level 5. Udyam MSME Registered & GeM Vendor.</p>
       </div>
     </footer>
   `;
