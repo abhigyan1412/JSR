@@ -567,21 +567,26 @@
    Partners / OEM Logos Grid
    ========================================================================== */
 .oem-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-4);
 }
 
+.oem-grid .oem-item {
+  width: calc(50% - var(--space-4));
+}
+
 @media (min-width: 576px) {
-  .oem-grid { grid-template-columns: repeat(3, 1fr); }
+  .oem-grid .oem-item { width: calc(33.333% - var(--space-4)); }
 }
 
 @media (min-width: 768px) {
-  .oem-grid { grid-template-columns: repeat(4, 1fr); }
+  .oem-grid .oem-item { width: calc(25% - var(--space-4)); }
 }
 
 @media (min-width: 1024px) {
-  .oem-grid { grid-template-columns: repeat(6, 1fr); }
+  .oem-grid .oem-item { width: calc(16.666% - var(--space-4)); }
 }
 
 .oem-item {
@@ -597,6 +602,14 @@
   font-weight: 700;
   color: var(--color-text-light-muted);
   transition: all var(--transition-normal);
+}
+
+.distributor-grid .oem-item {
+  height: 112px;
+}
+
+.distributor-grid .oem-logo {
+  max-height: 72px;
 }
 
 .oem-item:hover {
