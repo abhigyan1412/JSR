@@ -29,8 +29,9 @@ The project displays authorization and integrates solutions for 15 primary Origi
 1. **Dell Technologies**
 2. **HPE**
 3. **Juniper Networks**
-4. **Arista Networks**
-5. **Fortinet**
+4. **Asus**
+5. **Arista Networks**
+6. **Fortinet**
 6. **CrowdStrike**
 7. **OpenText**
 8. **Tyrone**
